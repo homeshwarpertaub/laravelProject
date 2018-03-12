@@ -4,7 +4,7 @@ namespace App\Model\user;
 
 use Illuminate\Database\Eloquent\Model;
 
-class courseChoice extends Model
+class ScUpload extends Model
 {
     //
     public function applicant()

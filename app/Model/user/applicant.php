@@ -3,7 +3,6 @@
 namespace App\Model\user;
 
 
-
 use Illuminate\Database\Eloquent\Model;
 
 class applicant extends Model
@@ -47,6 +46,17 @@ class applicant extends Model
     public function application()
     {
         return $this->hasMany(application::class);
+    }
+
+    //scuploads
+    public function ScUpload()
+    {
+        return $this->hasMany(ScUpload::class);
+    }
+
+    //hscuploads
+    public function hscUploads(){
+        return $this->hasMany(hscUploads::class);
     }
 
 }

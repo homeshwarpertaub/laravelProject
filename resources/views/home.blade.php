@@ -1,4 +1,4 @@
-@extends('user/app')
+@extends('applicant/app')
 @section('title','Welcome')
 @section('main-content')
     <main>

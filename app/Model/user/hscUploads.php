@@ -4,10 +4,10 @@ namespace App\Model\user;
 
 use Illuminate\Database\Eloquent\Model;
 
-class courseChoice extends Model
+class hscUploads extends Model
 {
     //
-    public function applicant()
+        public function applicant()
     {
         return $this->belongsTo(applicant::class);
     }

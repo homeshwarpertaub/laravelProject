@@ -9,7 +9,7 @@ class otherQualification extends Model
 {
     use Notifiable;
 
-    protected $fillable=['othercourse1','otherInst1','othergrade1','instDuration1','from1','to1'];
+    protected $fillable=['otherCourse1','otherInst1','othergrade1','instDuration1','from1','to1'];
     protected $table = 'other_qualifications';
 
 
