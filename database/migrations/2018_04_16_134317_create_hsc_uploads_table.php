@@ -17,6 +17,8 @@ class CreateHscUploadsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('size');
+            $table->integer('applicant_id');
+
             $table->timestamps();
         });
     }

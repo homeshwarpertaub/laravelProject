@@ -14,15 +14,24 @@ class CreateCourseChoicesTable extends Migration
     public function up()
     {
         Schema::create('course_choices', function (Blueprint $table) {
-            $table->increments('course_id');
-            $table->string('course_title');
-            $table->string('course_duration');
-            $table->string('course_code');
+            $table->increments('id');
+            $table->string('title1');
+            $table->string('duration1');
+            $table->string('code1');
+            $table->string('title2');
+            $table->string('duration2');
+            $table->string('code2');
+            $table->string('title3');
+            $table->string('duration3');
+            $table->string('code3');
             $table->integer('applicant_id');
-
             $table->timestamps();
+
         });
+
+
     }
+
 
     /**
      * Reverse the migrations.
@@ -31,6 +40,6 @@ class CreateCourseChoicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courseChoices');
+        Schema::dropIfExists('course_choices');
     }
 }

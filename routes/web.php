@@ -34,8 +34,12 @@ Route::group(['namespace' => 'User'], function () {
 
     Route::get('search', 'CourseController@search');
     Route::resource('apply', 'applicationcontroller');
+    Route::post('send','mailcontroller@send');
+    Route::get('email','mailcontroller@email');
 
 });
+
+
 
 Route::group(['namespace' => 'Admin'], function () {
     Route::get('admin/home', 'HomeController@index')->name('admin.home');
@@ -48,6 +52,7 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('admin-login', 'Auth\LoginController@showLoginForm')->name('admin.login');
     //if it is post req it goes to loginController @ login function under same name as admin-login
     Route::post('admin-login', 'Auth\LoginController@login');
+    Route::get('admin-applicants','ApplicantsController@viewApplicants');
 
 
 });

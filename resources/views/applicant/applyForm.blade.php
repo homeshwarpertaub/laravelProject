@@ -393,30 +393,6 @@
                                                         </td>
 
                                                     </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <div class="md-form">
-                                                                    <input type="text" id="institution3"
-                                                                    class="form-control"
-                                                                    name="institution3">
-                                                                    <label for="institution3">Institution Name
-                                                                    here</label>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="date"
-                                                                id="dateEntered" name="entered3">
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <input class="form-control" type="date"
-                                                            id="dateLeft" name="left3">
-                                                        </td>
-
-                                                    </tr>
 
                                                 </tbody>
 
@@ -505,131 +481,73 @@
                                                 <td>
                                                     <div class="md-form">
                                                         <input type="text" id="otherCourse1" class="form-control"
-                                                        name="rows[0][otherCourse1]" multiple="true">
+                                                        name="otherCourse1">
                                                         <label for="otherCourse1">course1 here</label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="md-form">
                                                         <input type="text" id="otherinst1" class="form-control"
-                                                        name="rows[0][otherInsti1]" multiple="true">
+                                                        name="otherInsti1">
                                                         <label for="otherinst1">inst1 here</label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="md-form">
                                                         <input type="text" id="othergrade1" class="form-control"
-                                                        name="rows[0][othergrade1]" multiple="true">
+                                                        name="othergrade1">
                                                         <label for="othergrade1">gradee1 here</label>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="md-form">
-                                                        <input type="text" id="instDuration1" class="form-control"
-                                                        name="rows[0][instDuration1]" multiple="true">
-                                                        <label for="instDuration1">duration1 here</label>
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="date"
+                                                        id="from1" name="from1">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
                                                         <input class="form-control" type="date"
-                                                        id="from1" name="rows[0[from1]" multiple="true">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <input class="form-control" type="date"
-                                                        id="to1" name="rows[0][to1]" multiple="true">
+                                                        id="to1" name="to1">
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
+                                                <td>2</td>
                                                 <td>
                                                     <div class="md-form">
                                                         <input type="text" id="otherCourse2" class="form-control"
-                                                        name="rows[1][otherCourse1]" multiple="true">
+                                                        name="otherCourse2">
                                                         <label for="otherCourse2">course1 here</label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="md-form">
                                                         <input type="text" id="otherinst2" class="form-control"
-                                                        name="rows[1][otherInsti1]" multiple="true">
+                                                        name="otherInsti2">
                                                         <label for="otherinst2">inst1 here</label>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="md-form">
                                                         <input type="text" id="othergrade2" class="form-control"
-                                                        name="rows[1][othergrade1]" multiple="true">
+                                                        name="othergrade2">
                                                         <label for="othergrade2">gradee1 here</label>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="md-form">
-                                                        <input type="text" id="instDuration2" class="form-control"
-                                                        name="rows[1][instDuration1]" multiple="true">
-                                                        <label for="instDuration2">duration1 here</label>
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="date"
+                                                        id="from2" name="from2">
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
                                                         <input class="form-control" type="date"
-                                                        id="from2" name="rows[1][from1]" multiple="true">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group">
-                                                        <input class="form-control" type="date"
-                                                        id="to2" name="rows[1][to1]" multiple="true">
+                                                        id="to2" name="to2">
                                                     </div>
                                                 </td>
                                             </tr>
-                                               <!--  <tr>
-                                                   <td>2</td>
-                                                   <td>
-                                                       <div class="md-form">
-                                                           <input type="text" id="course2" class="form-control"
-                                                                  name="othercourse1[]" multiple="true">
-                                                           <label for="course2">course2 here</label>
-                                                       </div>
-                                                   </td>
-                                                   <td>
-                                                       <div class="md-form">
-                                                           <input type="text" id="inst2" class="form-control"
-                                                                  name="otherInsti1[]">
-                                                           <label for="inst2">inst2 here</label>
-                                                       </div>
-                                                   </td>
-                                                   <td>
-                                                       <div class="md-form">
-                                                           <input type="text" id="gradee2" class="form-control"
-                                                                  name="othergrade1[]">
-                                                           <label for="gradee2">gradee2 here</label>
-                                                       </div>
-                                                   </td>
-                                                   <td>
-                                                       <div class="md-form">
-                                                           <input type="text" id="instDuration2" class="form-control"
-                                                                  name="instDuration1[]">
-                                                           <label for="instDuration2">duration2 here</label>
-                                                       </div>
-                                                   </td>
-                                                   <td>
-                                                       <div class="form-group">
-                                                           <input class="form-control" type="date"
-                                                                  id="from2" name="from1[]">
-                                                       </div>
-                                                   </td>
-                                                   <td>
-                                                       <div class="form-group">
-                                                           <input class="form-control" type="date"
-                                                                  id="to2" name="to1[]">
-                                                       </div>
-                                                   </td>
-                                               </tr> -->
-
                                            </tbody>
                                        </table>
                                    </div>
@@ -646,27 +564,15 @@
                                     <table id="employmentTable" class="table table-bordered text-center">
                                         <thead>
                                             <tr>
-                                                <th>From</th>
-                                                <th>To</th>
                                                 <th>Name of Employers/Firms</th>
                                                 <th>Address of Employers/Firms</th>
                                                 <th>Positions Held</th>
                                                 <th>Job Description</th>
+                                                <th>From</th>
+                                                <th>To</th>
                                             </tr>
                                             <tbody>
                                                 <tr>
-                                                    <td>
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="date"
-                                                            id="from" name="jobFromDate1">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="date"
-                                                            id="to" name="jobToDate2">
-                                                        </div>
-                                                    </td>
                                                     <td>
                                                         <div class="md-form">
                                                             <input type="text" id="name" class="form-control"
@@ -695,20 +601,20 @@
                                                             <label for="description">Description here</label>
                                                         </div>
                                                     </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="date"
+                                                                   id="from" name="jobFromDate1">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="date"
+                                                                   id="to" name="jobToDate1">
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="date"
-                                                            id="from" name="jobFromDate2">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="date"
-                                                            id="to" name="jobToDate2">
-                                                        </div>
-                                                    </td>
                                                     <td>
                                                         <div class="md-form">
                                                             <input type="text" id="name2" class="form-control"
@@ -737,46 +643,16 @@
                                                             <label for="description2">Description here</label>
                                                         </div>
                                                     </td>
-                                                </tr>
-                                                <tr>
                                                     <td>
                                                         <div class="form-group">
                                                             <input class="form-control" type="date"
-                                                            id="from" name="jobFromDate3">
+                                                                   id="from" name="jobFromDate2">
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div class="form-group">
                                                             <input class="form-control" type="date"
-                                                            id="to" name="jobToDate3">
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="md-form">
-                                                            <input type="text" id="name3" class="form-control"
-                                                            name="jobName3">
-                                                            <label for="name3">Name here</label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="md-form">
-                                                            <input type="text" id="address3" class="form-control"
-                                                            name="jobAddress3">
-                                                            <label for="address3">Address here</label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="md-form">
-                                                            <input type="text" id="position3" class="form-control"
-                                                            name="jobPosition3">
-                                                            <label for="position3">Insert here</label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="md-form">
-                                                            <input type="text" id="description3" class="form-control"
-                                                            name="jobDescription3">
-                                                            <label for="description3">Description here</label>
+                                                                   id="to" name="jobToDate2">
                                                         </div>
                                                     </td>
                                                 </tr>

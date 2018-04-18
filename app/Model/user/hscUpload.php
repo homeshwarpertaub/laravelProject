@@ -2,12 +2,14 @@
 
 namespace App\Model\user;
 
-
 use Illuminate\Database\Eloquent\Model;
 
-class scresult extends Model
+class hscUpload extends Model
 {
     //
+    protected $table = "hsc_uploads";
+    protected $fillable = ['name','size','applicant_id'];
+
     public function applicant()
     {
         return $this->belongsTo(applicant::class);

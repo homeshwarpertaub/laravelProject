@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateScUploadsTable extends Migration
+class CreateInstitutionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class CreateScUploadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sc_uploads', function (Blueprint $table) {
+        Schema::create('institutions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('size');
+            $table->string('inst_name1');
+            $table->date('entered1');
+            $table->date('left1');
+            $table->string('inst_name2');
+            $table->date('entered2');
+            $table->date('left2');
+            $table->integer('applicant_id');
+
             $table->timestamps();
         });
     }
@@ -28,6 +34,6 @@ class CreateScUploadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sc_uploads');
+        Schema::dropIfExists('institutions');
     }
 }
