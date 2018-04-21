@@ -53,7 +53,7 @@ Route::group(['namespace' => 'Admin'], function () {
     //if it is post req it goes to loginController @ login function under same name as admin-login
     Route::post('admin-login', 'Auth\LoginController@login');
     Route::get('admin-applicants','ApplicantsController@viewApplicants');
-
+Route::get('admin/pdf/getpdf','PdfController@getPDF');
 
 });
 

@@ -13,7 +13,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Model\user\User;
 
-
 use Eloquent;
 use Illuminate\Support\Facades\Auth;
 
@@ -134,7 +133,7 @@ class applicationcontroller extends Controller
             }
         }
 
-//hsc upload results
+        //hsc upload results
         $hscFiles = $request->file('hscAttachment');
         if ($hscFiles[0] != '') {
             foreach ($hscFiles as $hscFile) {
@@ -163,7 +162,6 @@ class applicationcontroller extends Controller
         $other->applicant_id = $app->id;
         $other->save();
 
-
         $employment = new employment();
         $employment->job_name1 = $request->jobName1;
         $employment->job_address1 = $request->jobAddress1;
@@ -180,12 +178,9 @@ class applicationcontroller extends Controller
         $employment->applicant_id = $app->id;
         $employment->save();
 
-
         return redirect(route('apply.index'));
 
-
     }
-
 
     /**
      * Display the specified resource.
