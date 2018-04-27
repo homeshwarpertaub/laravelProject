@@ -9,22 +9,9 @@
 </head>
 <body>
 <table>
-    <thead>
-    <th>
-        surname
-    </th>
-    <th>
-        sex
-    </th>
-    </thead>
-    <tbody>
-    @foreach($applicantspdf as $key =>$apdf)
-        <tr>
-            <td>{{ $apdf->applicant_surname }}</td>
-            <td>{{ $apdf->applicant_sex }}</td>
-        </tr>
-        @endforeach
-    </tbody>
+    <tr>
+        <td>{{ $applicant -> applicant_surname }}</td>
+    </tr>
 </table>
 </body>
 </html>

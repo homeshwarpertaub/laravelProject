@@ -24,10 +24,14 @@ class PdfController extends Controller
         $this->middleware('auth:admin');
     }
 
-    public function getPDF()
+
+    public function downloadPdf($id)
     {
-        $applicantspdf = applicant::all();
-        $pdf = PDF::loadview('admin.pdf.applicant',['applicantspdf'=>$applicantspdf]);
+        $applicant = applicant::find($id);
+
+        $pdf = PDF::loadView('admin.pdf.pdf', compact('applicant'));
+
         return $pdf->stream('applicant.pdf');
     }
+
 }

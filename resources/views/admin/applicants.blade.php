@@ -48,7 +48,8 @@
                                                 <td>{{ $applicant -> applicant_sex }}</td>
                                                 <td>{{ $applicant -> applicant_nationality }}</td>
                                                 <td>{{ $applicant -> applicant_email }}</td>
-                                                <td></td>
+                                                <td><a href="{{route('admin.pdfs',$applicant->id)}}">{{$applicant->id}}</a></td>
+
                                             </tr>
                                             </tbody>
                                         </table>

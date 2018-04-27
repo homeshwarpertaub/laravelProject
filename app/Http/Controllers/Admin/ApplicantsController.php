@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\user\applicant;
 use App\Model\user\courseChoice;
+use App\Model\user\employment;
+use App\Model\user\institution;
+use App\Model\user\otherQualification;
+use App\Model\user\scUpload;
+use App\Model\user\hscUpload;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\user\applicant;
+
 
 class ApplicantsController extends Controller
 {
