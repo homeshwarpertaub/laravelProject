@@ -1,32 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Model\user\applicant;
-use App\Model\user\courseChoice;
-use App\Model\user\employment;
-use App\Model\user\institution;
-use App\Model\user\otherQualification;
-use App\Model\user\Payment;
-use App\Model\user\scUpload;
-use App\Model\user\hscUpload;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class ApplicantsController extends Controller
+class PaymentController extends Controller
 {
-
-    /**
-     *Create a new controller instance
-     *
-     * @return void
-     */
-
-    public function __construct()
-    {
-        $this->middleware('auth:admin');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -35,9 +14,6 @@ class ApplicantsController extends Controller
     public function index()
     {
         //
-        $applicants = applicant::all();
-        return view('admin.applicants.applicants',compact('applicants'));
-
     }
 
     /**
@@ -81,11 +57,6 @@ class ApplicantsController extends Controller
     public function edit($id)
     {
         //
-//        $payment = Payment::find($payment->id);
-        $applicants = applicant::find($id);
-
-        return view('admin.applicants.edit',compact('applicants'));
-
     }
 
     /**
@@ -98,11 +69,6 @@ class ApplicantsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $applicants = applicant::find($id);
-       $payment = Payment::where('applicant_id',$applicants->id)->first();
-       $payment->payment_status = $request->paymentStatus;
-       $applicants->Payment()->save($payment);
-        return redirect(route('admin-applicants.index'));
     }
 
     /**

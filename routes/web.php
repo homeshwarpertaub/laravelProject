@@ -51,9 +51,8 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('admin-login', 'Auth\LoginController@showLoginForm')->name('admin.login');
     //if it is post req it goes to loginController @ login function under same name as admin-login
     Route::post('admin-login', 'Auth\LoginController@login');
-    Route::get('admin-applicants', 'ApplicantsController@viewApplicants');
     Route::get('admin/pdf/getpdf/{id}', 'PdfController@downloadPdf')->name('admin.pdfs');
-
+Route::resource('admin/admin-applicants','ApplicantsController');
 });
 
 

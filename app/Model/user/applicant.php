@@ -39,4 +39,19 @@ class applicant extends Model
     {
         return $this->hasMany(employment::class);
     }
+
+    public function Payment()
+    {
+        return $this->hasOne(Payment::class);
+    }
+
+    public function Delivery()
+    {
+        return $this->hasOne(Delivery::class);
+    }
+
+    public function Result()
+    {
+        return $this->hasOne(Result::class);
+    }
 }

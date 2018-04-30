@@ -17,7 +17,6 @@ class CreateResultsTable extends Migration
             $table->increments('id');
             $table->string('result_status');
             $table->string('result_comments');
-            $table->date('result_date');
             $table->integer('applicant_id');
 
             $table->timestamps();

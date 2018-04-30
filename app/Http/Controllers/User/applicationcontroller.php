@@ -7,6 +7,7 @@ use App\Model\user\courseChoice;
 use App\Model\user\employment;
 use App\Model\user\institution;
 use App\Model\user\otherQualification;
+use App\Model\user\Payment;
 use App\Model\user\scUpload;
 use App\Model\user\hscUpload;
 use Illuminate\Http\Request;
@@ -177,6 +178,13 @@ class applicationcontroller extends Controller
         $employment->job_to2 = $request->jobToDate2;
         $employment->applicant_id = $app->id;
         $employment->save();
+
+        $payment = new Payment();
+        $payment->payment_status = 'Unpaid';
+        $payment->type = 'cash';
+        $payment->applicant_id = $app->id;
+        $payment->save();
+
 
         return redirect(route('apply.index'));
 
