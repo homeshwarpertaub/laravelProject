@@ -35,28 +35,32 @@
                                 <th>Email</th>
 
                                 <th>Payment</th>
-                                <th>Delivered To</th>
-                                <th>Result</th>
+                                <th>Delivery Status</th>
+                                <th>Delivery Comments</th>
+                                <th>Result status</th>
+                                <th>Result comments</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <form action="{{ route('admin-applicants.update',$applicants->id) }}" method="post">
                                     {{ csrf_field() }}
-                                    {{ method_field('PUT') }}
+                                    {{ method_field('PATCH') }}
                                     <td>{{ $applicants -> applicant_surname }}</td>
                                     <td>{{ $applicants -> applicant_otherName }}</td>
                                     <td>{{ $applicants -> applicant_email }}</td>
 
                                     <td><input type="text" name="paymentStatus"
                                                value="{{ $applicants->Payment['payment_status']  }}"></td>
-                                    <td><input type="text" name="deliveredTo" placeholder="Recipient Name"></td>
-                                    <td><input type="text" name="result" placeholder="Accepted/Rejected"></td>
+                                    <td><input type="text" name="status" placeholder="Delivery Status" value="{{ $applicants->Delivery['deliveries_status'] }}"></td>
+                                    <td><input type="text" name="deliveredTo" placeholder="Recipient Name" value="{{ $applicants->Delivery['comments'] }}"></td>
+                                    <td><input type="text" name="result_status" placeholder="Accepted/Rejected" value="{{ $applicants->Result['result_status'] }}"></td>
+                                    <td><input type="text" name="result_comments" value="{{ $applicants->Result['result_comments'] }}"></td>
 
                             </tr>
                             <tr>
                                 <td>
-                                    <button type="submit" class="btn btn-success">Submit</button>
+                                    <button type="submit" class="btn btn-success">Save</button>
                                 </td>
                             </tr>
                             </form>

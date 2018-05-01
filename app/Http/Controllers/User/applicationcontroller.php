@@ -4,10 +4,12 @@ namespace App\Http\Controllers\User;
 
 use App\Model\user\applicant;
 use App\Model\user\courseChoice;
+use App\Model\user\Delivery;
 use App\Model\user\employment;
 use App\Model\user\institution;
 use App\Model\user\otherQualification;
 use App\Model\user\Payment;
+use App\Model\user\Result;
 use App\Model\user\scUpload;
 use App\Model\user\hscUpload;
 use Illuminate\Http\Request;
@@ -184,6 +186,19 @@ class applicationcontroller extends Controller
         $payment->type = 'cash';
         $payment->applicant_id = $app->id;
         $payment->save();
+
+        $delivery = new Delivery();
+        $delivery->deliveries_status = "New Application";
+//        $delivery->comments = '';
+        $delivery->applicant_id = $app->id;
+        $delivery->save();
+
+        $result = new Result();
+        $result->result_status = 'Unchecked';
+//        $result->result_comments = '';
+        $result->applicant_id = $app->id;
+        $result->save();
+
 
 
         return redirect(route('apply.index'));
