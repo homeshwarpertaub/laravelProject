@@ -35,7 +35,8 @@
                         Edit Roles
                     </h3>
                     @include('includes.messages')
-                    <form action="{{ route('role.update',$role->id) }}" class="form-horizontal" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('role.update',$role->id) }}" class="form-horizontal" method="post"
+                          enctype="multipart/form-data">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
                         <div class="form-group">
@@ -48,14 +49,17 @@
                         <div class="row">
 
                             <div class="col-md-4">
-                                <label for="name">Posts Permissions</label>
+                                <label for="name">Course Permissions</label>
                                 @foreach($permissions as $permission)
                                     @if($permission->to_do == 'post')
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="permission[]"
-                                                          value="{{ $permission->id }}"
-                                                @foreach($role->permissions as $role_permit)
-                                                    @if($role_permit->id == $permission->id) checked @endif @endforeach>{{ $permission->name }}</label>
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   @if($role_permit->id == $permission->id)
+                                                   checked
+                                                    @endif
+                                                    @endforeach><label>{{ $permission->name }}</label>
+
                                         </div>
                                     @endif
                                 @endforeach
@@ -65,29 +69,74 @@
                                 <label for="name">User Permissions</label>
                                 @foreach($permissions as $permission)
                                     @if($permission->to_do == 'user')
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="permission[]"
-                                                          value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
-                                                          @if($role_permit->id == $permission->id) checked @endif @endforeach>{{ $permission->name }}</label>
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   @if($role_permit->id == $permission->id)
+                                                   checked
+                                                    @endif
+                                                    @endforeach><label>{{ $permission->name }}</label>
+
                                         </div>
                                     @endif
                                 @endforeach
 
                             </div>
-
                             <div class="col-md-4">
-                                <label for="name">Other Permissions</label>
+                                <label for="name">Payment permissions</label>
                                 @foreach($permissions as $permission)
-                                    @if($permission->to_do == 'other')
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="permission[]"
-                                                          value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
-                                                          @if($role_permit->id == $permission->id) checked @endif @endforeach>{{ $permission->name }}</label>
+                                    @if($permission->to_do == 'payment')
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   @if($role_permit->id == $permission->id)
+                                                   checked
+                                                    @endif
+                                                    @endforeach><label>{{ $permission->name }}</label>
+
                                         </div>
                                     @endif
                                 @endforeach
 
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="name">Application Delivered</label>
+                                @foreach($permissions as $permission)
+                                    @if($permission->to_do == 'delivery')
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   @if($role_permit->id == $permission->id)
+                                                   checked
+                                                    @endif
+                                                    @endforeach><label>{{ $permission->name }}</label>
+
+                                        </div>
+                                    @endif
+                                @endforeach
+
+                            </div>
+                            <div class="col-md-4">
+                                <label for="name">Application Result</label>
+                                @foreach($permissions as $permission)
+                                    @if($permission->to_do == 'result')
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   @if($role_permit->id == $permission->id)
+                                                   checked
+                                                    @endif
+                                                    @endforeach><label>{{ $permission->name }}</label>
+
+                                        </div>
+                                    @endif
+                                @endforeach
+
+                            </div>
+
+
                         </div>
 
 

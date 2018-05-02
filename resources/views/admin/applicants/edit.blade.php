@@ -34,9 +34,14 @@
 
                                 <th>Email</th>
 
-                                <th>Payment</th>
+                                @can('Payment.update',Auth::user())
+                                    <th>Payment</th>
+                                @endcan
+                                @can('Delivery.update',Auth::user())
                                 <th>Delivery Status</th>
                                 <th>Delivery Comments</th>
+                                @endcan
+
                                 <th>Result status</th>
                                 <th>Result comments</th>
                             </tr>
@@ -50,12 +55,23 @@
                                     <td>{{ $applicants -> applicant_otherName }}</td>
                                     <td>{{ $applicants -> applicant_email }}</td>
 
-                                    <td><input type="text" name="paymentStatus"
-                                               value="{{ $applicants->Payment['payment_status']  }}"></td>
-                                    <td><input type="text" name="status" placeholder="Delivery Status" value="{{ $applicants->Delivery['deliveries_status'] }}"></td>
-                                    <td><input type="text" name="deliveredTo" placeholder="Recipient Name" value="{{ $applicants->Delivery['comments'] }}"></td>
-                                    <td><input type="text" name="result_status" placeholder="Accepted/Rejected" value="{{ $applicants->Result['result_status'] }}"></td>
-                                    <td><input type="text" name="result_comments" value="{{ $applicants->Result['result_comments'] }}"></td>
+                                    @can('Payment.update',Auth::user())
+                                        <td><input type="text" name="paymentStatus"
+                                                   value="{{ $applicants->Payment['payment_status']  }}">
+                                        </td>                                    @endcan
+                                    @can('Delivery.update',Auth::user())
+                                    <td><input type="text" name="status" placeholder="Delivery Status"
+                                               value="{{ $applicants->Delivery['deliveries_status'] }}"></td>
+                                    <td><input type="text" name="deliveredTo" placeholder="Recipient Name"
+                                               value="{{ $applicants->Delivery['comments'] }}"></td>
+                                    @endcan
+                                    @can('Result.update',Auth::user())
+                                    <td><input type="text" name="result_status" placeholder="Accepted/Rejected"
+                                               value="{{ $applicants->Result['result_status'] }}"></td>
+                                    <td><input type="text" name="result_comments"
+                                               value="{{ $applicants->Result['result_comments'] }}"></td>
+                                @endcan
+
 
                             </tr>
                             <tr>

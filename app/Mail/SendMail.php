@@ -2,10 +2,14 @@
 
 namespace App\Mail;
 
+use App\Model\user\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Auth;
+
+
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class SendMail extends Mailable
@@ -27,8 +31,10 @@ class SendMail extends Mailable
      *
      * @return $this
      */
-    public function build(request $request)
+    public function build()
     {
-        return $this->view('applicant.mail',['msg'=>$request->message])->to($request->to);
+        $id = Auth::user()->id;
+        $user = User::find($id);
+        return $this->view('applicant.mail', ['name' => $user->name])->to($user->email);
     }
 }

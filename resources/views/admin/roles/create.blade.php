@@ -47,12 +47,12 @@
                         <div class="row">
 
                             <div class="col-md-4">
-                                <label for="name">Posts Permissions</label>
+                                <label for="name">Course Permissions</label>
                                 @foreach($permissions as $permission)
                                     @if($permission->to_do == 'post')
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="permission[]"
-                                                          value="{{ $permission->id }}">{{ $permission->to_do }}</label>
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                          value="{{ $permission->id }}"><label>{{ $permission->name }}</label>
                                         </div>
                                     @endif
                                 @endforeach
@@ -62,69 +62,97 @@
                                 <label for="name">User Permissions</label>
                                 @foreach($permissions as $permission)
                                     @if($permission->to_do == 'user')
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="permission[]"
-                                                          value="{{ $permission->id }}">{{ $permission->to_do }}</label>
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                          value="{{ $permission->id }}"><label>{{ $permission->name }}</label>
                                         </div>
                                     @endif
                                 @endforeach
 
                             </div>
-
                             <div class="col-md-4">
-                                <label for="name">Other Permissions</label>
+                                <label for="name">Payment permissions</label>
                                 @foreach($permissions as $permission)
-                                    @if($permission->to_do == 'other')
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="permission[]"
-                                                          value="{{ $permission->id }}">{{ $permission->to_do }}</label>
+                                    @if($permission->to_do == 'payment')
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                          value="{{ $permission->id }}"><label>{{ $permission->name }}</label>
                                         </div>
                                     @endif
                                 @endforeach
 
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="name">Application Delivered</label>
+                                @foreach($permissions as $permission)
+                                    @if($permission->to_do == 'delivery')
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                          value="{{ $permission->id }}"><label>{{ $permission->name }}</label>
+                                        </div>
+                                    @endif
+                                @endforeach
 
-                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                        <a href="{{route('role.index')}}" class="btn btn-warning">Back</a>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="name">Application Result</label>
+                                @foreach($permissions as $permission)
+                                    @if($permission->to_do == 'result')
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="permission[]"
+                                                          value="{{ $permission->id }}"><label>{{ $permission->name }}</label>
+                                        </div>
+                                    @endif
+                                @endforeach
 
-                    </form>
+                            </div>
+
+
+                        </div>
                 </div>
+
+                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                <a href="{{route('role.index')}}" class="btn btn-warning">Back</a>
+
+                </form>
             </div>
         </div>
+    </div>
 
-        <!-- /.row -->
-        <!-- .right-sidebar -->
-        <div class="right-sidebar">
-            <div class="slimscrollright">
-                <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span></div>
-                <div class="r-panel-body">
-                    <ul>
-                        <li><b>Layout Options</b></li>
-                        <li>
-                            <div class="checkbox checkbox-info">
-                                <input id="checkbox1" type="checkbox" class="fxhdr">
-                                <label for="checkbox1"> Fix Header </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox checkbox-warning">
-                                <input id="checkbox2" type="checkbox" checked="" class="fxsdr">
-                                <label for="checkbox2"> Fix Sidebar </label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox checkbox-success">
-                                <input id="checkbox4" type="checkbox" class="open-close">
-                                <label for="checkbox4"> Toggle Sidebar </label>
-                            </div>
-                        </li>
-                    </ul>
+    <!-- /.row -->
+    <!-- .right-sidebar -->
+    <div class="right-sidebar">
+        <div class="slimscrollright">
+            <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span></div>
+            <div class="r-panel-body">
+                <ul>
+                    <li><b>Layout Options</b></li>
+                    <li>
+                        <div class="checkbox checkbox-info">
+                            <input id="checkbox1" type="checkbox" class="fxhdr">
+                            <label for="checkbox1"> Fix Header </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-warning">
+                            <input id="checkbox2" type="checkbox" checked="" class="fxsdr">
+                            <label for="checkbox2"> Fix Sidebar </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="checkbox checkbox-success">
+                            <input id="checkbox4" type="checkbox" class="open-close">
+                            <label for="checkbox4"> Toggle Sidebar </label>
+                        </div>
+                    </li>
+                </ul>
 
-                </div>
             </div>
         </div>
-        <!-- /.right-sidebar -->
+    </div>
+    <!-- /.right-sidebar -->
     </div>
     <!-- /.container-fluid -->
 

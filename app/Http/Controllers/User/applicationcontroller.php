@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Mail\SendMail;
 use App\Model\user\applicant;
 use App\Model\user\courseChoice;
 use App\Model\user\Delivery;
@@ -198,6 +199,8 @@ class applicationcontroller extends Controller
 //        $result->result_comments = '';
         $result->applicant_id = $app->id;
         $result->save();
+
+
 
 
 

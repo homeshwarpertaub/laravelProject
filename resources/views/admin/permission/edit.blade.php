@@ -45,6 +45,16 @@
                                        id="name" value="{{$permission->name}}"></div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="to_do">Permission for</label>
+                            <select name="to_do" id="to_do" class="form-control">
+                                <option selected disabled>Select Permission</option>
+                                <option value="{{ $permission->to_do }}">{{ $permission->to_do }}</option>
+                                <option value="{{ $permission->to_do }}">{{ $permission->to_do }}</option>
+                                <option value="{{ $permission->to_do }}">Other</option>
+                            </select>
+                        </div>
+
                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                         <a href="{{route('permission.index')}}" class="btn btn-warning">Back</a>
 

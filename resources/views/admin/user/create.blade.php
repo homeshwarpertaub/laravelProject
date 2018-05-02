@@ -71,8 +71,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="status">Status</label>
-                            <div class="checkbox"><label><input type="checkbox" name="status" value="1">Status</label>
+                            <div class="col-sm-9">
+                                <div class="checkbox checkbox-success">
+                                    <input id="checkboxPublish" type="checkbox" name="checkboxPublish">
+                                    <label for="checkboxPublish">Publish</label>
+                                </div>
                             </div>
                         </div>
 
@@ -81,9 +84,9 @@
                             <div class="row">
                                 @foreach($roles as $role)
                                     <div class="col-md-4">
-                                        <div class="checkbox">
-                                            <label><input type="checkbox" name="role[]"
-                                                          value="{{$role->id}}">{{$role->name}}</label>
+                                        <div class="checkbox checkbox-success">
+                                            <input type="checkbox" name="role[]"
+                                                   value="{{$role->id}}"> <label>{{$role->name}}</label>
                                         </div>
                                     </div>
                                 @endforeach
@@ -92,11 +95,12 @@
                         </div>
 
 
-                </div>
-                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                <a href="{{route('user.index')}}" class="btn btn-warning">Back</a>
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                        <a href="{{route('user.index')}}" class="btn btn-warning">Back</a>
 
-                </form>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

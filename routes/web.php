@@ -34,8 +34,8 @@ Route::group(['namespace' => 'User'], function () {
 
     Route::get('search', 'CourseController@search');
     Route::resource('apply', 'applicationcontroller');
-    Route::post('send', 'mailcontroller@send');
-    Route::get('email', 'mailcontroller@email');
+    Route::get('send', 'mailcontroller@send');
+//    Route::get('email', 'mailcontroller@email');
 
 });
 

@@ -9,6 +9,6 @@
 </head>
 <body>
 <br>
-<h1>mail has been sent {{$msg}}</h1>
+<h1>mail has been sent {{$name}}</h1>
 </body>
 </html>

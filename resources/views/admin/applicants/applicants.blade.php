@@ -32,7 +32,10 @@
                                                 class="caret"></span></a>
                                     <ul class="dropdown-menu bullet dropdown-menu-right" aria-labelledby="panelDropdown"
                                         role="menu">
+
                                         <li role="presentation"><a href="#" role="menuitem">View PDF</a></li>
+                                        @endcan
+
                                         <li role="presentation"><a
                                                     href="{{ route('admin-applicants.edit',$applicant->id) }}"
                                                     role="menuitem">Edit</a></li>

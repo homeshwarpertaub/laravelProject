@@ -49,8 +49,10 @@
                             <select name="to_do" id="to_do" class="form-control">
                                 <option selected disabled>Select Permission</option>
                                 <option value="user">User</option>
-                                <option value="post">Post</option>
-                                <option value="other">Other</option>
+                                <option value="course">Course</option>
+                                <option value="payment">Payment</option>
+                                <option value="delivery">Delivery</option>
+                                <option value="result">Result</option>
                             </select>
                         </div>
 
