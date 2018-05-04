@@ -15,18 +15,18 @@
         </div>
     </div>
     <div class="row">
-            <div class="form-group">
-                <label for="surname">Surname: </label> {{$applicant->applicant_surname}}</div>
-            <div class="form-group">
-                <label for="surname">Other name(s): </label> {{$applicant->applicant_otherName}}</div>
-            <div class="form-group">
-                <label for="surname">Maiden name: </label> {{$applicant->applicant_maidenName}}</div>
-            <div class="form-group">
-                <label for="surname">Date of Birth: </label> {{$applicant->applicant_dob}}</div>
-            <div class="form-group">
-                <label for="surname">Sex: </label> {{$applicant->applicant_sex}}</div>
-            <div class="form-group">
-                <label for="surname">Status: </label> {{$applicant->applicant_status}}</div>
+        <div class="form-group">
+            <label for="surname">Surname: </label> {{$applicant->applicant_surname}}</div>
+        <div class="form-group">
+            <label for="surname">Other name(s): </label> {{$applicant->applicant_otherName}}</div>
+        <div class="form-group">
+            <label for="surname">Maiden name: </label> {{$applicant->applicant_maidenName}}</div>
+        <div class="form-group">
+            <label for="surname">Date of Birth: </label> {{$applicant->applicant_dob}}</div>
+        <div class="form-group">
+            <label for="surname">Sex: </label> {{$applicant->applicant_sex}}</div>
+        <div class="form-group">
+            <label for="surname">Status: </label> {{$applicant->applicant_status}}</div>
     </div>
     <hr>
     {{--row 2--}}
@@ -35,52 +35,36 @@
         <div class="form-group"><label for="">ID Number: </label>{{ $applicant->applicant_Pid }}</div>
         <div class="form-group"><label for="">If not Mauritian: </label>{{ $applicant->applicant_notMauritian }}</div>
         <div class="form-group"><label for="">Address: </label>{{ $applicant->applicant_address }}</div>
-            <div class="form-group row">
-                <div class="col-10">
-                    <div class="md-form">
-                        <i class="fa fa-phone prefix"></i>
-                        <input type="tel" id="home" class="form-control"
-                               name="profileHome">
-                        <label for="home">Home</label>
-                    </div>
-                    <div class="md-form">
-                        <i class="fa fa-phone-square prefix"></i>
-                        <input type="tel" id="office" class="form-control"
-                               name="profileOffice">
-                        <label for="office">Office</label>
-                    </div>
-                    <div class="md-form">
-                        <i class="fa fa-mobile prefix"></i>
-                        <input type="tel" id="mobile" class="form-control"
-                               name="profileMobile">
-                        <label for="mobile">Mobile</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <div class="form-group row">
-                <div class="md-form">
-                    <i class="fa fa-fax prefix"></i>
-                    <input type="tel" id="fax" class="form-control" name="profileFax">
-                    <label for="fax">Fax Number</label>
-                </div>
-                <div class="md-form">
-                    <i class="fa fa-envelope-o prefix"></i>
-                    <input type="email" id="email" class="form-control"
-                           name="profileEmail">
-                    <label for="email">Email</label>
-                </div>
-            </div>
-        </div>
+        <div class="form-group"><label for="">Home Phone Number: </label>{{ $applicant->applicant_home }}</div>
+        <div class="form-group"><label for="">Office Phone Number: </label>{{ $applicant->applicant_office }}</div>
+        <div class="form-group"><label for="">Mobile Phone Number: </label>{{ $applicant->applicant_mobile }}</div>
+        <div class="form-group"><label for="">Fax Phone Number: </label>{{ $applicant->applicant_fax }}</div>
+        <div class="form-group"><label for="">Email Address: </label>{{ $applicant->applicant_email }}</div>
     </div>
+
     <hr>
     {{--row 3--}}
     <div class="row">
-        <div class="col-12">
+        <div class="form-group"><label for="">Parent Name: </label>{{ $applicant->applicant_parentName }}</div>
+        <div class="form-group"><label for="">Parent Address: </label>{{ $applicant->applicant_parentAddress }}</div>
+        <div class="form-group"><label for="">Parent Home Number: </label>{{ $applicant->applicant_parentHome }}</div>
+        <div class="form-group"><label for="">Parent Office Number: </label>{{ $applicant->applicant_parentOffice }}</div>
+
+        <div class="form-group"><label for="">Referee 1 Name: </label>{{ $applicant->applicant_referee1Name }}</div>
+        <div class="form-group"><label for="">Referee 2 Occupation: </label>{{ $applicant->applicant_referee1Occupation }}</div>
+        <div class="form-group"><label for="">Referee 1 Address: </label>{{ $applicant->applicant_referee1Address }}</div>
+        <div class="form-group"><label for="">Referee 1 Phone: </label>{{ $applicant->applicant_referee1Phone }}</div
+        <div class="form-group"><label for="">Referee 2 Name: </label>{{ $applicant->applicant_referee2Name }}</div>
+        <div class="form-group"><label for="">Referee 2 Occupation: </label>{{ $applicant->applicant_referee2Occupation }}</div>
+        <div class="form-group"><label for="">Referee 2 Address: </label>{{ $applicant->applicant_referee2Address }}</div>
+        <div class="form-group"><label for="">Referee 2 Phone: </label>{{ $applicant->applicant_referee2Phone }}</div>
+
+    </div>
+    <hr>
+    <div class="row">
+
             <h5 class="lead text-center">PROGRAMME OF STUDY APPLIED FOR <span
-                        class="text-muted small"> (In order of preferences, only courses you are interested in)</span>
+                        class="text-muted small"> (In order of preferences)</span>
             </h5>
             <table id="myTable" class="table table-bordered text-center">
                 <thead>
