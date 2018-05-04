@@ -1,4 +1,6 @@
 @extends('admin.layouts.app')
+@section('title','View Permissions')
+@section('activepermissionview','active')
 
 @section('headSection')
     <link href="{{asset('admin/plugins/bower_components/datatables/jquery.dataTables.min.css')}}" rel="stylesheet">
@@ -6,30 +8,14 @@
 @endsection
 @section('main-content')
     <div class="container-fluid">
-        <div class="row bg-title">
-            <!-- .page title -->
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Starter Page</h4>
-            </div>
-            <!-- /.page title -->
-            <!-- .breadcrumb -->
-            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820"
-                   target="_blank"
-                   class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy
-                    Now</a>
-                <ol class="breadcrumb">
-                    <li><a href="#">Dashboard</a></li>
-                    <li class="active">Starter Page</li>
-                </ol>
-            </div>
-            <!-- /.breadcrumb -->
-        </div>
-        <!-- .row -->
-        <a href="{{route('permission.create')}}" class="btn btn-success">Add New Permission</a>
-        <div class="row">
+
+        <div class="row m-t-20">
+
             <div class="col-md-12">
+                <a href="{{route('permission.create')}}" class="btn btn-success m-b-20">Add New Permission</a>
+
                 <div class="white-box">
+
                     <h3 class="box-title m-b-0">Data Table</h3>
                     <p class="text-muted m-b-30">Data table example</p>
                     <div class="table-responsive">

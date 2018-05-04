@@ -1,4 +1,6 @@
 @extends('admin.layouts.app')
+@section('title','Create Admin')
+@section('activeadmincreate','active')
 
 @section('headSection')
 
@@ -11,24 +13,8 @@
 @section('main-content')
     <div class="container-fluid">
 
-        <div class="row bg-title">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Bootstrap Wysiwig Editor</h4></div>
-            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"><a
-                        href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820"
-                        target="_blank"
-                        class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy
-                    Now</a>
-                <ol class="breadcrumb">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Forms</a></li>
-                    <li class="active">Wysiwig Editor</li>
-                </ol>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- .row -->
-        <div class="row">
+
+        <div class="row m-t-20">
             <div class="col-md-12">
                 <div class="white-box">
                     <h3 class="box-title">
@@ -68,15 +54,6 @@
                                 <input type="password" class="form-control" name="password_confirmation"
                                        placeholder="Confirm Password"
                                        id="password_confirmation"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="checkbox checkbox-success">
-                                    <input id="checkboxPublish" type="checkbox" name="checkboxPublish">
-                                    <label for="checkboxPublish">Publish</label>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="form-group">

@@ -1,4 +1,6 @@
 @extends('admin.layouts.app')
+@section('title','Edit Admin')
+@section('activepermissionview','active')
 
 @section('headSection')
 
@@ -11,24 +13,7 @@
 @section('main-content')
     <div class="container-fluid">
 
-        <div class="row bg-title">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Bootstrap Wysiwig Editor</h4></div>
-            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"><a
-                        href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820"
-                        target="_blank"
-                        class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy
-                    Now</a>
-                <ol class="breadcrumb">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Forms</a></li>
-                    <li class="active">Wysiwig Editor</li>
-                </ol>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- .row -->
-        <div class="row">
+        <div class="row m-t-20">
             <div class="col-md-12">
                 <div class="white-box">
                     <h3 class="box-title">
@@ -83,11 +68,12 @@
                         </div>
 
 
-                </div>
-                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                <a href="{{route('user.index')}}" class="btn btn-warning">Back</a>
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                        <a href="{{route('user.index')}}" class="btn btn-warning">Back</a>
 
-                </form>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

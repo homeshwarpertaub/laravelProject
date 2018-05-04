@@ -14,6 +14,7 @@ use App\Model\user\Delivery;
 use App\Model\user\Result;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class ApplicantsController extends Controller
 {
@@ -85,9 +86,12 @@ class ApplicantsController extends Controller
     {
         //
 //        $payment = Payment::find($payment->id);
-        $applicants = applicant::find($id);
+//        if (Auth::user()->can('Delivery.update')) {
+            $applicants = applicant::find($id);
+            return view('admin.applicants.edit', compact('applicants'));
+//        }
+//        return redirect(route('admin.home'));
 
-        return view('admin.applicants.edit', compact('applicants'));
 
     }
 

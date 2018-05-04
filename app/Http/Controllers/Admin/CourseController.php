@@ -79,7 +79,7 @@ class CourseController extends Controller
         $course->course_duration = $request->courseDuration;
         $course->slug = $request->slug;
         $course->image= $request->image;
-        ;
+
         $course->course_body = $request->courseBody;
         $course->save();
         $course->categories()->sync($request->categories);
@@ -137,7 +137,7 @@ class CourseController extends Controller
             $course->course_duration = $request->courseDuration;
             $course->slug = $request->slug;
             $course->image = $request->image;
-//        $course->course_body = $request->courseBody;
+        $course->course_body = $request->courseBody;
             $course->categories()->sync($request->categories);
             $course->save();
 

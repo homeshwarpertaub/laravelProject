@@ -204,7 +204,7 @@ class applicationcontroller extends Controller
 
 
 
-        return redirect(route('apply.index'));
+        return redirect(route('mailsent'));
 
     }
 

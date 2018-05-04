@@ -4,7 +4,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/plugins/images/favicon.png')}}">
-<title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+<title>@yield('title')</title>
 <!-- Bootstrap Core CSS -->
 <link href="{{asset('admin/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
 <!-- animation CSS -->

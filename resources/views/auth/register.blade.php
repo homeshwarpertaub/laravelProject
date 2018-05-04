@@ -41,6 +41,18 @@
                         @endif
                     </div>
                 </div>
+
+                <div class="form-group {{ $errors->has('mobile') ? ' has-error' : '' }}">
+                    <div class="col-xs-12">
+                        <input id="name" class="form-control" name="mobile" type="text" required autofocus value="{{ old('mobile') }}" placeholder="Mobile">
+                        @if ($errors->has('mobile'))
+                            <span class="help-block">
+                                        <strong>{{ $errors->first('mobile') }}</strong>
+                                    </span>
+                        @endif
+                    </div>
+                </div>
+
                 <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                     <div class="col-xs-12">
                         <input id="email" class="form-control" type="email" name="email" required placeholder="Email" value="{{ old('email') }}">

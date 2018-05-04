@@ -21,7 +21,6 @@ class PaymentPolicy
     public function view(admin $user)
     {
         //
-        return $this->getPermission($user, 22);
 
     }
 

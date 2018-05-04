@@ -25,16 +25,18 @@
 
 //User routes
 Route::group(['namespace' => 'User'], function () {
-    Route::get('/', 'HomeController@index');
+    Route::get('/', 'HomeController@index')->name('applicant.home');
     //slug == column name
-    Route::get('courses', 'CourseController@index')->name('applicant.viewCourses'); //route = viewCourses
+    Route::get('courses', 'CourseController@index')->name('applicant.allCourses'); //route = viewCourses
+    Route::get('viewcourses', 'CourseController@search')->name('applicant.viewCourses'); //route = viewCourses
+    Route::get('courses/details/{id}', 'CourseController@courseDetails')->name('applicant.courseDetails'); //route = v
     Route::get('courses/{course}', 'CourseController@course')->name('applicant.courses');
 
     Route::get('courses/category/{category}', 'HomeController@category')->name('category');
 
     Route::get('search', 'CourseController@search');
     Route::resource('apply', 'applicationcontroller');
-    Route::get('send', 'mailcontroller@send');
+    Route::get('send', 'mailcontroller@send')->name('mailsent');
 //    Route::get('email', 'mailcontroller@email');
 
 });
@@ -53,6 +55,8 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::post('admin-login', 'Auth\LoginController@login');
     Route::get('admin/pdf/getpdf/{id}', 'PdfController@downloadPdf')->name('admin.pdfs');
 Route::resource('admin/admin-applicants','ApplicantsController');
+Route::get('/admin/sms','smsController@index')->name('sms');
+Route::post('/admin/sms/send','smsController@message');
 });
 
 

@@ -1,14 +1,14 @@
 @extends('applicant/app')
-@section('title','HomePage')
+@section('title','Apply Online - My University')
+@section('activeapply','active')
 @section('main-content')
 
 <div class="" style="background-image: url({{asset('user/img/wizard-profile.jpg')}})">
-
     <!--   Main container   -->
     <div class="container example z-depth-5">
         <div class="row justify-content-md-center">
             <div class="jumbotron col-md-12"><!-- Nav tabs -->
-                <h1 class="h1 main-title text-center h1-responsive">UNIVERSITY OF TECHNOLOGY, MAURITIUS {{ Auth::user()->id }}</h1>
+                <h1 class="h1 main-title text-center h1-responsive">MY UNIVERSITY, MAURITIUS</h1>
                 <hr>
                 <h4 class="h4-responsive text-center">APPLICATION FOR ADMISSION: ACADEMIC YEAR 2018/2019</h4>
                 <hr>
@@ -810,7 +810,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" onclick="" class="btn btn-primary">Submit</button>
                                 </div>
                             </div>
                         </div>

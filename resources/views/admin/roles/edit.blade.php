@@ -1,4 +1,6 @@
 @extends('admin.layouts.app')
+@section('title','Edit Roles')
+@section('activerolesview','active')
 
 @section('headSection')
 
@@ -11,24 +13,7 @@
 @section('main-content')
     <div class="container-fluid">
 
-        <div class="row bg-title">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Bootstrap Wysiwig Editor</h4></div>
-            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"><a
-                        href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820"
-                        target="_blank"
-                        class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy
-                    Now</a>
-                <ol class="breadcrumb">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Forms</a></li>
-                    <li class="active">Wysiwig Editor</li>
-                </ol>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- .row -->
-        <div class="row">
+        <div class="row m-t-20">
             <div class="col-md-12">
                 <div class="white-box">
                     <h3 class="box-title">
@@ -54,7 +39,8 @@
                                     @if($permission->to_do == 'post')
                                         <div class="checkbox checkbox-success">
                                             <input type="checkbox" name="permission[]"
-                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   value="{{ $permission->id }}"
+                                                   @foreach($role->permissions as $role_permit)
                                                    @if($role_permit->id == $permission->id)
                                                    checked
                                                     @endif
@@ -71,7 +57,8 @@
                                     @if($permission->to_do == 'user')
                                         <div class="checkbox checkbox-success">
                                             <input type="checkbox" name="permission[]"
-                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   value="{{ $permission->id }}"
+                                                   @foreach($role->permissions as $role_permit)
                                                    @if($role_permit->id == $permission->id)
                                                    checked
                                                     @endif
@@ -88,7 +75,8 @@
                                     @if($permission->to_do == 'payment')
                                         <div class="checkbox checkbox-success">
                                             <input type="checkbox" name="permission[]"
-                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   value="{{ $permission->id }}"
+                                                   @foreach($role->permissions as $role_permit)
                                                    @if($role_permit->id == $permission->id)
                                                    checked
                                                     @endif
@@ -97,7 +85,6 @@
                                         </div>
                                     @endif
                                 @endforeach
-
                             </div>
                         </div>
                         <div class="row">
@@ -107,12 +94,12 @@
                                     @if($permission->to_do == 'delivery')
                                         <div class="checkbox checkbox-success">
                                             <input type="checkbox" name="permission[]"
-                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   value="{{ $permission->id }}"
+                                                   @foreach($role->permissions as $role_permit)
                                                    @if($role_permit->id == $permission->id)
                                                    checked
                                                     @endif
                                                     @endforeach><label>{{ $permission->name }}</label>
-
                                         </div>
                                     @endif
                                 @endforeach
@@ -124,7 +111,8 @@
                                     @if($permission->to_do == 'result')
                                         <div class="checkbox checkbox-success">
                                             <input type="checkbox" name="permission[]"
-                                                   value="{{ $permission->id }}" @foreach($role->permissions as $role_permit)
+                                                   value="{{ $permission->id }}"
+                                                   @foreach($role->permissions as $role_permit)
                                                    @if($role_permit->id == $permission->id)
                                                    checked
                                                     @endif
@@ -139,10 +127,11 @@
 
                         </div>
 
-
-                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                        <a href="{{route('role.index')}}" class="btn btn-warning">Back</a>
-
+                        <div class="m-t-20">
+                            <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit
+                            </button>
+                            <a href="{{route('role.index')}}" class="btn btn-warning">Back</a>
+                        </div>
                     </form>
                 </div>
             </div>

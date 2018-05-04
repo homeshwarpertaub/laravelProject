@@ -12,7 +12,7 @@ class CourseController extends Controller
     public function index()
     {
         $courses = course::all();
-        return view('applicant.viewCourses', compact('courses'));
+        return view('applicant.allCourses', compact('courses'));
     }
 
     //get the course via the slug from dbse
@@ -20,6 +20,12 @@ class CourseController extends Controller
     {
         //slug $slug should be same
         return view('applicant.courses', compact('course'));
+    }
+
+    public function courseDetails(Request $request, $id)
+    {
+        $courseDetails = course::find($id);
+        return view('applicant.courseDetails',compact('courseDetails'));
     }
 
     public function search(Request $request)
@@ -33,7 +39,7 @@ class CourseController extends Controller
                 $searchResult[] = $value->course_name;
             }
         }
-        return $searchResult;
+//        return $searchResult;
         return view('applicant.viewCourses', compact('courses'));
 
 

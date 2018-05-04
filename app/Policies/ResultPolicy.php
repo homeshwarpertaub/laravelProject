@@ -22,7 +22,6 @@ class ResultPolicy
     public function view(admin $user)
     {
         //
-        return $this->getPermission($user, 24);
 
     }
 

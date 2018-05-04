@@ -1,20 +1,19 @@
 @extends('admin.layouts.app')
+@section('title','View Applicants')
+@section('activeapplicantsview','active')
+
 @section('headSection')
-
-
 @endsection
 
 
 @section('main-content')
     <div class="container">
-        <div class="row m-t-10">
+        <div class="row m-t-20">
 
             <div class="col-md-10">
                 @foreach($applicants as $applicant)
-
                     <div class="panel panel-inverse">
-                        <div class="panel-heading">{{ $applicant -> id }}
-
+                        <div class="panel-heading">Applicant {{ $applicant -> id }}
                             {{-- <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                                  {{ csrf_field() }}
                                  {{method_field('PUT')}}
@@ -33,14 +32,16 @@
                                     <ul class="dropdown-menu bullet dropdown-menu-right" aria-labelledby="panelDropdown"
                                         role="menu">
 
-                                        <li role="presentation"><a href="#" role="menuitem">View PDF</a></li>
-                                        @endcan
+                                        <li role="presentation"><a target="_blank" href="{{route('admin.pdfs',$applicant->id)}}"
+                                                                   role="menuitem">View PDF</a></li>
+                                        {{--@endcan--}}
+                                        {{--@can('Delivery.update',Auth::user())--}}
 
                                         <li role="presentation"><a
                                                     href="{{ route('admin-applicants.edit',$applicant->id) }}"
                                                     role="menuitem">Edit</a></li>
-                                        <li role="presentation"><a href="#" role="menuitem" data-toggle="modal"
-                                                                   data-target="#deliveryModal">Delivery</a></li>
+                                            {{--@endcan--}}
+
                                     </ul>
                                 </div>
                             </div>
@@ -57,7 +58,6 @@
                                                 <th>Sex</th>
                                                 <th>Nationality</th>
                                                 <th>Email</th>
-                                                <th>Photo</th>
                                                 <th>Payment</th>
                                                 <th>Delivered To</th>
                                                 <th>Result</th>
@@ -65,17 +65,15 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>{{ $applicant -> applicant_surname }}
-                                                </td>
+                                                <td>{{ $applicant -> applicant_surname }}</td>
                                                 <td>{{ $applicant -> applicant_otherName }}</td>
                                                 <td>{{ $applicant -> applicant_sex }}</td>
                                                 <td>{{ $applicant -> applicant_nationality }}</td>
                                                 <td>{{ $applicant -> applicant_email }}</td>
+                                                <td>{{ $applicant->Payment['payment_status']  }}</td>
                                                 <td>
                                                     <a href="{{route('admin.pdfs',$applicant->id)}}">{{$applicant->id}}</a>
                                                 </td>
-                                                <td>{{ $applicant->Payment['payment_status']  }}</td>
-                                                <td></td>
                                                 <td></td>
 
 

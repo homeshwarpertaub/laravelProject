@@ -26,6 +26,7 @@ class mailcontroller extends Controller
     public function send()
     {
         Mail::send(new SendMail());
+        return view('applicant.mailsent');
 
     }
 
