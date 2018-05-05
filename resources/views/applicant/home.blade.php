@@ -99,6 +99,7 @@
 
                         <!-- Title -->
                         <h4 class="card-title">Apply Online Now</h4>
+                        <a href="{{ route('update.edit',Auth::user()->id) }}">Edit </a>
                         <!-- Text -->
                         <p class="card-text">Start Your Online Application Now! All applications will be reviewed
                             thoroughly and equally in the admissions process regardless of application tool.</p>

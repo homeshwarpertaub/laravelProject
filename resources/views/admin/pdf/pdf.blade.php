@@ -53,7 +53,7 @@
         <div class="form-group"><label for="">Referee 1 Name: </label>{{ $applicant->applicant_referee1Name }}</div>
         <div class="form-group"><label for="">Referee 2 Occupation: </label>{{ $applicant->applicant_referee1Occupation }}</div>
         <div class="form-group"><label for="">Referee 1 Address: </label>{{ $applicant->applicant_referee1Address }}</div>
-        <div class="form-group"><label for="">Referee 1 Phone: </label>{{ $applicant->applicant_referee1Phone }}</div
+        <div class="form-group"><label for="">Referee 1 Phone: </label>{{ $applicant->applicant_referee1Phone }}</div>
         <div class="form-group"><label for="">Referee 2 Name: </label>{{ $applicant->applicant_referee2Name }}</div>
         <div class="form-group"><label for="">Referee 2 Occupation: </label>{{ $applicant->applicant_referee2Occupation }}</div>
         <div class="form-group"><label for="">Referee 2 Address: </label>{{ $applicant->applicant_referee2Address }}</div>

@@ -39,6 +39,9 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('send', 'mailcontroller@send')->name('mailsent');
 //    Route::get('email', 'mailcontroller@email');
 
+//    Route::get('applicant/update/{id}',['as' => 'applicant.edit','uses' => 'UserEditController@edit']);
+//    Route::put('applicant/update/{id}',  ['as' => 'applicant.update', 'uses' => 'UserEditController@update']);
+    Route::resource('update','UserEditController');
 });
 
 
@@ -75,3 +78,5 @@ Route::get('admin/category', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
