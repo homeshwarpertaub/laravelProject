@@ -42,6 +42,8 @@ Route::group(['namespace' => 'User'], function () {
 //    Route::get('applicant/update/{id}',['as' => 'applicant.edit','uses' => 'UserEditController@edit']);
 //    Route::put('applicant/update/{id}',  ['as' => 'applicant.update', 'uses' => 'UserEditController@update']);
     Route::resource('update','UserEditController');
+    Route::get('contact','ContactController@index');
+    Route::post('contact','ContactController@sendContact')->name('contactEmail');
 });
 
 
@@ -58,8 +60,8 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::post('admin-login', 'Auth\LoginController@login');
     Route::get('admin/pdf/getpdf/{id}', 'PdfController@downloadPdf')->name('admin.pdfs');
 Route::resource('admin/admin-applicants','ApplicantsController');
-Route::get('/admin/sms','smsController@index')->name('sms');
-Route::post('/admin/sms/send','smsController@message');
+Route::get('admin/sms','smsController@index')->name('sms');
+Route::post('admin/sms/send','smsController@getUserNumber')->name('message');
 });
 
 

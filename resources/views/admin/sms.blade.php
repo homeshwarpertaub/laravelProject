@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('message') }}" method="post" class="form-horizontal">
+                <form action="{{ route('message') }}" method="POST" class="form-horizontal">
                     {{csrf_field()}}
                     <div class="form-group"><label for="message" class="control-label">Enter Message</label>
                         <textarea name="message" required autofocus id="" cols="30" rows="10"
