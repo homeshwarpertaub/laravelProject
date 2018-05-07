@@ -42,8 +42,6 @@ class CourseController extends Controller
 //        return $searchResult;
         return view('applicant.viewCourses', compact('courses'));
 
-
-
     }
 
 

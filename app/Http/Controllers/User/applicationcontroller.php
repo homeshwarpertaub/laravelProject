@@ -14,8 +14,9 @@ use App\Model\user\Result;
 use App\Model\user\scUpload;
 use App\Model\user\hscUpload;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+//use Illuminate\Routing\Controller;
 use App\Model\user\User;
+use App\Http\Controllers\Controller;
 
 use Eloquent;
 use Illuminate\Support\Facades\Auth;
@@ -41,17 +42,6 @@ class applicationcontroller extends Controller
     public function create()
     {
         //
-        /* $this->validate($request, [
-                    'receipt_date' => 'date|required',
-                    'return_date' => 'date|required',
-                    'user_name' => 'required',
-                    'user_phone' => 'required',
-                    'work_sum' => 'integer|required',
-                    'user_descr' => 'required',
-                    'foruser_descr' => 'required'
-                ]);*/
-
-
     }
 
     /**
@@ -62,7 +52,41 @@ class applicationcontroller extends Controller
      */
     public function store(Request $request)
     {
-//        $applicant_id = \Auth::user()->id;
+
+        $this->validate($request, [
+            'profileSurname' => 'required|min:3',
+            'profileOthername' => 'required|min:3',
+            'maidenName' => 'min:3',
+            'profileDate' => 'before:2005-01-31',
+            'pid' => 'required|alpha_num|min:13|max:14',
+            'notMauritian' => 'min:3|alpha',
+            'uploadNationality' => 'file|image',
+            'profileAddress' => 'required|min:2',
+//            'profileHome' => 'required|numeric|min:6|max:7|',
+            'profileOffice' => 'min:6|max:7',
+            'profileMobile' => 'required||min:7',
+            'profileFax' => 'min:6|max:7',
+            'profileEmail' => 'required|email',
+            'parentName' => 'min:2',
+            'parentAddress' => 'min:2',
+            'parentHome' => 'numeric|min:6|',
+            'parentOffice' => 'numeric|min:6|',
+            'refereeName' => 'required|min:2',
+            'refereeOccupation' => 'required|min:2',
+            'refereeAddress' => 'required|min:2',
+            'refereePhone' => 'required|numeric|min:6|',
+            'title1' => 'required|min:2',
+            'code1' => 'required|min:2|alpha_num',
+            'title2' => 'required|min:2',
+            'code2' => 'required|min:2|alpha_num',
+            'title3' => 'required|min:2',
+            'code3' => 'required|min:2|alpha_num',
+            'institution1' => 'required|min:2',
+            'entered1' => 'required|date|before:today',
+            'left1' => 'required|date|after:entered1|before:today',
+
+
+        ]);
 
         $app = new applicant;
         $app->applicant_surname = $request->profileSurname;
@@ -72,7 +96,7 @@ class applicationcontroller extends Controller
         $app->applicant_sex = $request->sex;
         $app->applicant_status = $request->status;
         $app->applicant_nationality = $request->nationality;
-        $app->applicant_Pid = $request->pid;
+//        $app->applicant_Pid = $request->pid;
         $app->applicant_Pid = $request->pid;
         $app->applicant_notMauritian = $request->notMauritian;
         $app->applicant_IDproof = $request->uploadNationality->getClientOriginalName();
@@ -199,9 +223,6 @@ class applicationcontroller extends Controller
 //        $result->result_comments = '';
         $result->applicant_id = $app->id;
         $result->save();
-
-
-
 
 
         return redirect(route('mailsent'));

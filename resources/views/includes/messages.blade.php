@@ -1,7 +1,9 @@
 @if (count($errors)>0)
+    <ul>
     @foreach ($errors->all() as $error)
-        <p class="alert alert-danger">{{ $error }}</p>
+        <li class="alert alert-danger">{{ $error }}</li>
     @endforeach
+    </ul>
 @endif
 
 @if(session()->has('message'))

@@ -32,7 +32,7 @@
                 {{ csrf_field() }}
                 {{ method_field('patch') }}
 
-                <h3 class="box-title m-b-20">Register</h3>
+                <h3 class="box-title m-b-20">Modify My Profile</h3>
                 <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
                     <div class="col-xs-12">
                         <input id="name" class="form-control" name="name" type="text" required autofocus value="{{ $user->name }}" placeholder="Name">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
-                        <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Savep</button>
+                        <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Save</button>
                     </div>
                 </div>
             </form>

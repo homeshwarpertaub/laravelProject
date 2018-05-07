@@ -28,7 +28,6 @@ class PdfController extends Controller
     public function downloadPdf($id)
     {
         $applicant = applicant::find($id);
-
         $pdf = PDF::loadView('admin.pdf.pdf', compact('applicant'));
 
         return $pdf->stream('applicant.pdf');

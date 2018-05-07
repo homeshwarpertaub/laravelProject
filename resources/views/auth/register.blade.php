@@ -26,7 +26,7 @@
 <body>
 
 <section id="wrapper" class="login-register">
-    <div class="login-box">
+    <div class="login-box m-b-20">
         <div class="white-box">
             <form class="form-horizontal form-material" id="loginform" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}

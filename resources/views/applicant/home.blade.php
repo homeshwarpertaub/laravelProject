@@ -25,7 +25,7 @@
                     <div class="flex-center animated fadeIn">
                         <ul>
                             <li>
-                                <h1 class="h1-responsive">Welcome to My University</h1></li>
+                                <h1 class="h1-responsive">Welcome {{ ucfirst(Auth::user()->name) }} to My University</h1></li>
                             <li>
                                 <p>The most promising institution for you to make your career</p>
                             </li>
@@ -99,8 +99,14 @@
 
                         <!-- Title -->
                         <h4 class="card-title">Apply Online Now</h4>
-                        <a href="{{ route('update.edit',Auth::user()->id) }}">Edit </a>
-                        <!-- Text -->
+                        @guest
+                            <a href="#">Edit </a>
+
+                        @else
+                                <a href="{{ route('update.edit',Auth::user()->id) }}">Edit </a>
+                            @endguest
+
+                                <!-- Text -->
                         <p class="card-text">Start Your Online Application Now! All applications will be reviewed
                             thoroughly and equally in the admissions process regardless of application tool.</p>
                         <!-- Button -->
