@@ -76,6 +76,16 @@
                 </ul>
             </li>
 
+            <li>
+                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                    <span class="hide-menu">Calendar<span class="fa arrow"></span><span
+                                class="label label-rouded label-purple pull-right">2</span></span></a>
+                <ul class="nav nav-second-level">
+                    <li class="@yield('activecalendarview')"><a href="{{ route('calendar.index') }}">View Calendar</a></li>
+                    <li class="@yield('activeeditcalendar')"><a href="{{ route('calendar.create') }}">Edit Calendar</a></li>
+                </ul>
+            </li>
+
 
 
         </ul>

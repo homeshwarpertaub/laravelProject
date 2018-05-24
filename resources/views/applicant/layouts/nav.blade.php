@@ -50,10 +50,23 @@
                                             class="fa fa-edit" aria-hidden="true"></i></span>
                                 </a></li>
                             @endguest
+                    <li class="nav-item @yield('activecalendar')">
+
+                        <a class="nav-link" href="{{ route('applicant.calendar') }}">Calendar <span><i
+                                        class="fa fa-calendar" aria-hidden="true"></i></span></a>
+
+                    </li>
+
                             <li class="nav-item @yield('activecontact')">
                                 <a class="nav-link" href="#">Contact <span><i class="fa fa-envelope-open-o"
                                                                               aria-hidden="true"></i></span></a>
                             </li>
+
+                    <li class="nav-item @yield('activeabout')">
+                        <a class="nav-link" href="#">About <span><i class="fa fa-envelope-open-o"
+                                                                      aria-hidden="true"></i></span></a>
+                    </li>
+
 
                             <li class="nav-item @yield('activehelp')">
                                 <a class="nav-link" href="#">Help <span><i class="fa fa-info" aria-hidden="true"></i></span></a>

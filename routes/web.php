@@ -23,7 +23,11 @@
 //});
 
 
+
 //User routes
+
+
+
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'HomeController@index')->name('applicant.home');
     //slug == column name
@@ -31,7 +35,7 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('viewcourses', 'CourseController@search')->name('applicant.viewCourses'); //route = viewCourses
     Route::get('courses/details/{id}', 'CourseController@courseDetails')->name('applicant.courseDetails'); //route = v
     Route::get('courses/{course}', 'CourseController@course')->name('applicant.courses');
-
+Route::get('calendar','calendarController@index')->name('applicant.calendar');
     Route::get('courses/category/{category}', 'HomeController@category')->name('category');
 
     Route::get('search', 'CourseController@search');
@@ -62,6 +66,7 @@ Route::group(['namespace' => 'Admin'], function () {
 Route::resource('admin/admin-applicants','ApplicantsController');
 Route::get('admin/sms','smsController@index')->name('sms');
 Route::post('admin/sms/send','smsController@getUserNumber')->name('message');
+Route::resource('admin/calendar','CalendarEventsController');
 });
 
 
