@@ -56,49 +56,50 @@
                                         class="fa fa-calendar" aria-hidden="true"></i></span></a>
 
                     </li>
+                    @guest
 
-                            <li class="nav-item @yield('activecontact')">
-                                <a class="nav-link" href="#">Contact <span><i class="fa fa-envelope-open-o"
-                                                                              aria-hidden="true"></i></span></a>
-                            </li>
+                        <li class="nav-item @yield('activeapply')"><a class="nav-link" href="{{ route('login') }}">Contact Us <span><i
+                                            class="fa fa-edit" aria-hidden="true"></i></span></a></li>
+                    @else
+                        <li class="nav-item @yield('activecontact')">
+                            <a class="nav-link" href="{{ route('applicant.contact') }}">Contact Us<span><i class="fa fa-envelope-open-o"
+                                                                                                         aria-hidden="true"></i></span></a>
+                        </li>
+                    @endguest
 
-                    <li class="nav-item @yield('activeabout')">
-                        <a class="nav-link" href="#">About <span><i class="fa fa-envelope-open-o"
+
+                    <li class="nav-item @yield('activeaboutus')">
+                        <a class="nav-link" href="{{ route('applicant.about') }}">About <span><i class="fa fa-envelope-open-o"
                                                                       aria-hidden="true"></i></span></a>
                     </li>
 
-
                             <li class="nav-item @yield('activehelp')">
-                                <a class="nav-link" href="#">Help <span><i class="fa fa-info" aria-hidden="true"></i></span></a>
+                                <a class="nav-link" href="{{ route('applicant.help') }}">Help <span><i class="fa fa-info" aria-hidden="true"></i></span></a>
                             </li>
-                            {{--  <li class="nav-item btn-group">
-                                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                                     aria-haspopup="true" aria-expanded="false">Dropdown
-                                  </a>
-                                  <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                      <a class="dropdown-item" href="#">Action</a>
-                                      <a class="dropdown-item" href="#">Another action</a>
-                                      <a class="dropdown-item" href="#">Something else here</a>
-                                  </div>
-                              </li>--}}
                 </ul>
                 <ul class="navbar-nav pull-right">
-                    @guest
-                        <li class="nav-item"><a href="{{ route('login') }}">Login <span><i class="fa fa-hand-peace-o"
-                                                                                           aria-hidden="true"></i></span></a>
-                        </li>
+
+                        @guest
+                            <li class="nav-item"><a href="{{ route('login') }}">Login <span><i class="fa fa-hand-peace-o"
+                                                                                               aria-hidden="true"></i></span></a>
+                            </li>
                         @else
-                            <a href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{{ route('update.edit',Auth::user()->id) }}">Edit My Account</a>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                Logout <span><i class="fa fa-hand-spock-o" aria-hidden="true"></i></span>
-                            </a>
+                                    Logout <span><i class="fa fa-hand-spock-o" aria-hidden="true"></i></span>
+                                </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                            @endguest
-
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </div>
+                        </li>
+                        @endguest
                 </ul>
             </div>
         </div>

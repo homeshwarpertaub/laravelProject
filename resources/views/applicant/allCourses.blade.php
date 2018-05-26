@@ -4,7 +4,7 @@
 @section('main-content')
 <main class="text-center">
     <div class="container">
-        <a href="{{route('applicant.viewCourses')}}"> Search Here <i class="fa fa-search" aria-hidden="true"></i></a>
+        <a href="{{route('applicant.viewCourses')}}" class="btn btn-outline-elegant"> Search Here <i class="fa fa-search" aria-hidden="true"></i></a>
         <div class="row">
             @foreach($courses as $course)
                 <div class="col-md-4">

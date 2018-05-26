@@ -24,17 +24,32 @@
                 <div class="carousel-caption">
                     <div class="flex-center animated fadeIn">
                         <ul>
-                            <li>
-                                <h1 class="h1-responsive">Welcome {{ ucfirst(Auth::user()->name) }} to My University</h1></li>
-                            <li>
-                                <p>The most promising institution for you to make your career</p>
-                            </li>
-                            <li>
-                                <a target="_blank" href="{{ route('register') }}" class="btn btn-primary btn-lg"
-                                   rel="nofollow">Sign up!</a>
-                                <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/"
-                                   class="btn btn-default btn-lg" rel="nofollow">Learn more</a>
-                            </li>
+                            @guest
+                                <li>
+                                    <h1 class="h1-responsive">Welcome to My University</h1></li>
+                                <li>
+
+                            @else
+                                <li>
+                                    <h1 class="h1-responsive">Welcome {{ ucfirst(Auth::user()->name) }} to My
+                                        University</h1></li>
+                                <li>
+                                    @endguest
+                                    <p>The most promising institution for you to make your career</p>
+                                </li>
+                                <li>
+                                    @guest
+                                        <a target="_blank" href="{{ route('register') }}"
+                                           class="btn btn-outline-cyan btn-lg"
+                                           rel="nofollow">Sign up!</a>
+                                    @else
+                                        <a href="#" class="btn btn-outline-cyan btn-lg"
+                                           rel="nofollow">Visit Us!</a>
+                                    @endguest
+
+                                    <a target="_blank" href="{{ route('applicant.about') }}"
+                                       class="btn btn-outline-light-green btn-lg" rel="nofollow">Learn more</a>
+                                </li>
                         </ul>
                     </div>
                 </div>
@@ -65,12 +80,12 @@
                     <div class="card-body">
 
                         <!-- Title -->
-                        <h4 class="card-title">Couses Available</h4>
+                        <h4 class="card-title">Courses Available</h4>
                         <!-- Text -->
                         <p class="card-text">Our A to Z Courses Directory for Undergraduate Courses. We offer one of the
                             widest ranges of qualifications, courses and modules in most subjects of study.</p>
                         <!-- Button -->
-                        <a href="{{ route('applicant.viewCourses') }}" class="btn btn-primary">View More</a>
+                        <a href="{{ route('applicant.viewCourses') }}" class="btn btn-outline-primary">View More</a>
 
                     </div>
 
@@ -99,19 +114,20 @@
 
                         <!-- Title -->
                         <h4 class="card-title">Apply Online Now</h4>
-                        @guest
-                            <a href="#">Edit </a>
+                    {{--@guest--}}
+                    {{--@else--}}
+                    {{--<a href="{{ route('update.edit',Auth::user()->id) }}">Edit </a>--}}
+                    {{--@endguest--}}
 
-                        @else
-                                <a href="{{ route('update.edit',Auth::user()->id) }}">Edit </a>
-                            @endguest
-
-                                <!-- Text -->
+                    <!-- Text -->
                         <p class="card-text">Start Your Online Application Now! All applications will be reviewed
                             thoroughly and equally in the admissions process regardless of application tool.</p>
                         <!-- Button -->
-                        <a href="#" class="btn btn-primary">Apply</a>
-
+                        @guest
+                            <a href="{{ route('login') }}" class="btn btn-outline-primary">Apply</a>
+                        @else
+                            <a href="{{ route('apply.index') }}" class="btn btn-outline-primary">Apply</a>
+                        @endguest
                     </div>
 
                 </div>
@@ -139,9 +155,10 @@
                         <!-- Title -->
                         <h4 class="card-title">Need Help?</h4>
                         <!-- Text -->
-                        <p class="card-text">Facing any difficulty or you have any query? Some frequently asked questions and/or guide to assist you in making your online application a smooth process</p>
+                        <p class="card-text">Facing any difficulty or you have any query? Some frequently asked
+                            questions and/or guide to assist you in making your online application a smooth process</p>
                         <!-- Button -->
-                        <a href="#" class="btn btn-primary">View FAQs</a>
+                        <a href="#" class="btn btn-outline-primary">View FAQs</a>
 
                     </div>
 

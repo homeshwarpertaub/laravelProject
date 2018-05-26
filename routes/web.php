@@ -23,9 +23,7 @@
 //});
 
 
-
 //User routes
-
 
 
 Route::group(['namespace' => 'User'], function () {
@@ -35,7 +33,7 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('viewcourses', 'CourseController@search')->name('applicant.viewCourses'); //route = viewCourses
     Route::get('courses/details/{id}', 'CourseController@courseDetails')->name('applicant.courseDetails'); //route = v
     Route::get('courses/{course}', 'CourseController@course')->name('applicant.courses');
-Route::get('calendar','calendarController@index')->name('applicant.calendar');
+    Route::get('calendar', 'calendarController@index')->name('applicant.calendar');
     Route::get('courses/category/{category}', 'HomeController@category')->name('category');
 
     Route::get('search', 'CourseController@search');
@@ -45,9 +43,11 @@ Route::get('calendar','calendarController@index')->name('applicant.calendar');
 
 //    Route::get('applicant/update/{id}',['as' => 'applicant.edit','uses' => 'UserEditController@edit']);
 //    Route::put('applicant/update/{id}',  ['as' => 'applicant.update', 'uses' => 'UserEditController@update']);
-    Route::resource('update','UserEditController');
-    Route::get('contact','ContactController@index');
-    Route::post('contact','ContactController@sendContact')->name('contactEmail');
+    Route::resource('update', 'UserEditController');
+    Route::get('contact', 'ContactController@index')->name('applicant.contact');
+    Route::post('contact', 'ContactController@sendContact')->name('contactEmail');
+    Route::get('aboutus','AboutusController@index')->name('applicant.about');
+    Route::get('help','HelpController@index')->name('applicant.help');
 });
 
 
@@ -63,10 +63,10 @@ Route::group(['namespace' => 'Admin'], function () {
     //if it is post req it goes to loginController @ login function under same name as admin-login
     Route::post('admin-login', 'Auth\LoginController@login');
     Route::get('admin/pdf/getpdf/{id}', 'PdfController@downloadPdf')->name('admin.pdfs');
-Route::resource('admin/admin-applicants','ApplicantsController');
-Route::get('admin/sms','smsController@index')->name('sms');
-Route::post('admin/sms/send','smsController@getUserNumber')->name('message');
-Route::resource('admin/calendar','CalendarEventsController');
+    Route::resource('admin/admin-applicants', 'ApplicantsController');
+    Route::get('admin/sms', 'smsController@index')->name('sms');
+    Route::post('admin/sms/send', 'smsController@getUserNumber')->name('message');
+    Route::resource('admin/calendar', 'CalendarEventsController');
 });
 
 

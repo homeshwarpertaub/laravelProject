@@ -78,14 +78,6 @@
                         <input class="form-control" id="password-confirm" type="password" name="password_confirmation" required placeholder="Confirm Password">
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-12">
-                        <div class="checkbox checkbox-primary p-t-0">
-                            <input id="checkbox-signup" type="checkbox" name="agree">
-                            <label for="checkbox-signup"> I agree to all <a href="#">Terms</a></label>
-                        </div>
-                    </div>
-                </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
                         <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Sign Up</button>

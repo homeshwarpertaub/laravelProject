@@ -1,9 +1,11 @@
-@extends('layouts.app')
+@extends('applicant/app')
+@section('title','Reset Password - My University')
+@section('activeapply','active')
+@section('main-content')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="container">
+        <div class="row mt-5 justify-content-md-center">
+            <div class="jumbotron col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
 
@@ -65,6 +67,6 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
-</div>
 @endsection

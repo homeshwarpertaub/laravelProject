@@ -1,9 +1,10 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+@extends('applicant/app')
+@section('title','Reset Password - My University')
+@section('activeapply','active')
+@section('main-content')
+    <div class="container">
+    <div class="row mt-5 justify-content-md-center">
+        <div class="jumbotron col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
 
@@ -21,7 +22,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required placeholder="Enter your Email Address here">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
