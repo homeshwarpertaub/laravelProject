@@ -5,7 +5,7 @@
 
 <div class="" style="background-image: url({{asset('user/img/wizard-profile.jpg')}})">
     <!--   Main container   -->
-    <div class="container example z-depth-5">
+    <div class="container example">
         <div class="row justify-content-md-center">
             <div class="jumbotron col-md-12"><!-- Nav tabs -->
                 <h1 class="h1 main-title text-center h1-responsive">MY UNIVERSITY, MAURITIUS</h1>
@@ -36,11 +36,11 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-8">
+                                        <div class="col-7">
                                             <div class="form-group">
                                                 <div class="md-form">
                                                     <i class="fa fa-user-o prefix"></i>
-                                                    <input type="text" id="surname"  autofocus class="form-control"
+                                                    <input type="text" id="surname" required autofocus class="form-control"
                                                     name="profileSurname">
                                                     <label for="surname">Surname</label>
                                                 </div>
@@ -48,7 +48,7 @@
                                             <div class="form-group">
                                                 <div class="md-form">
                                                     <i class="fa fa-user-o prefix"></i>
-                                                    <input type="text" id="otherNames"  autofocus class="form-control"
+                                                    <input type="text" id="otherNames" required autofocus class="form-control"
                                                     name="profileOthername">
                                                     <label for="otherNames">Other name(s) Mr./Mrs./Miss.</label>
                                                 </div>
@@ -63,13 +63,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-5">
                                             <div class="form-group row">
-                                                <label for="date" class="col-5 col-form-label lead">Date of
+                                                <label for="date" class="col-5 col-form-label lead"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Date of
                                                 birth</label>
                                                 <div class="col-7">
                                                     <input class="form-control" type="date"
-                                                    id="date" name="profileDate"  autofocus>
+                                                    id="date" name="profileDate" required autofocus>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -79,7 +79,7 @@
                                                         <label class="form-check-label">
                                                             <input class="form-check-input" type="radio"
                                                             name="sex" id="male"
-                                                            value="Male" > Male
+                                                            value="Male" required> Male
                                                         </label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
@@ -97,8 +97,7 @@
                                                     <div class="form-check form-check-inline">
                                                         <label class="form-check-label">
                                                             <input class="form-check-input" type="radio"
-                                                            name="status"  id="married" value="Married"
-                                                            > Married
+                                                            name="status" id="married" value="Married" required> Married
                                                         </label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
@@ -124,7 +123,7 @@
                                                         <label class="form-check-label">
                                                             <input class="form-check-input" type="radio"
                                                             name="nationality"  id="mauritian" value="Mauritian"
-                                                            > Mauritian
+                                                            required> Mauritian
                                                         </label>
                                                     </div>
                                                     <div class="form-check form-check-inline">
@@ -138,7 +137,7 @@
                                             </div>
                                             <div class="form-group row">
                                                 <div class="md-form">
-                                                    <input type="text" id="pid" class="form-control"  autofocus name="pid">
+                                                    <input type="text" id="pid" class="form-control" required autofocus name="pid">
                                                     <label for="pid">National ID Number</label>
                                                 </div>
                                                 <div class="md-form">
@@ -147,7 +146,7 @@
                                                     name="notMauritian">
                                                     <small>Please attach copy of ID Card/Other Identification/Passport
                                                     </small>
-                                                    <input type="file"  id="file" name="uploadNationality">
+                                                    <input type="file" class="btn btn-outline-primary" required id="file" name="uploadNationality">
                                                 </div>
                                             </div>
                                         </div>
@@ -157,7 +156,7 @@
                                                 <div class="md-form">
                                                     <i class="fa fa-address-book-o prefix"></i>
                                                     <input type="text" id="address" class="form-control"
-                                                    name="profileAddress"  autofocus>
+                                                    name="profileAddress" required autofocus>
                                                     <label for="address">Address (In full)</label>
                                                 </div>
                                             </div>
@@ -166,19 +165,19 @@
                                                     <div class="md-form">
                                                         <i class="fa fa-phone prefix"></i>
                                                         <input type="tel" id="home" class="form-control"
-                                                        name="profileHome"  autofocus>
+                                                        name="profileHome" required autofocus>
                                                         <label for="home">Home</label>
                                                     </div>
                                                     <div class="md-form">
                                                         <i class="fa fa-phone-square prefix"></i>
                                                         <input type="tel" id="office" class="form-control"
-                                                        name="profileOffice"  autofocus>
+                                                        name="profileOffice" required autofocus>
                                                         <label for="office">Office</label>
                                                     </div>
                                                     <div class="md-form">
                                                         <i class="fa fa-mobile prefix"></i>
                                                         <input type="tel" id="mobile" class="form-control"
-                                                        name="profileMobile"  autofocus>
+                                                        name="profileMobile" required autofocus>
                                                         <label for="mobile">Mobile</label>
                                                     </div>
                                                 </div>
@@ -189,13 +188,13 @@
                                             <div class="form-group row">
                                                 <div class="md-form">
                                                     <i class="fa fa-fax prefix"></i>
-                                                    <input type="tel" id="fax" class="form-control" name="profileFax"  autofocus>
+                                                    <input type="tel" id="fax" class="form-control" name="profileFax" required autofocus>
                                                     <label for="fax">Fax Number</label>
                                                 </div>
                                                 <div class="md-form">
                                                     <i class="fa fa-envelope-o prefix"></i>
                                                     <input type="email" id="email" class="form-control"
-                                                    name="profileEmail"  autofocus>
+                                                    name="profileEmail" required autofocus>
                                                     <label for="email">Email</label>
                                                 </div>
                                             </div>
@@ -404,7 +403,7 @@
                                             Certificates
                                         here.</h5>
                                         <div class="md-form">
-                                            <div class="btn btn-primary btn-sm">
+                                            <div class="btn btn-outline-primary btn-sm">
                                                 <span>Choose file</span>
                                                 <input type="file" name="scAttachment[]"  multiple="true">
 
@@ -417,7 +416,7 @@
                                     <div class="col-12"><h5 class="text-center lead">Upload all your Higher School
                                     Certificates here.</h5>
                                     <div class="md-form">
-                                        <div class="btn btn-primary btn-sm">
+                                        <div class="btn btn-outline-primary btn-sm">
                                             <span>Choose file</span>
                                             <input type="file" name="hscAttachment[]"  multiple="true">
                                         </div>
@@ -670,11 +669,13 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="md-form">
+                                        <i class="fa fa-user-o prefix"></i>
                                         <input type="text" id="parentName" class="form-control"
                                         name="parentName">
                                         <label for="parentName">Name of parent/guardian</label>
                                     </div>
                                     <div class="md-form">
+                                        <i class="fa fa-address-book-o prefix"></i>
                                         <input type="text" id="parentAddress" class="form-control"
                                         name="parentAddress">
                                         <label for="parentAddress">His/Her Address</label>
@@ -710,7 +711,7 @@
 
                             <div class="row">
                                 <div class="col-6">
-                                    <h5 style="text-decoration: underline">REFEREE 1</h5>
+                                    <h5 style="text-decoration: underline" class=" mb-3">REFEREE 1</h5>
                                     <div class="form-group">
                                         <div class="md-form">
                                             <i class="fa fa-user prefix"></i>
@@ -745,7 +746,7 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 style="text-decoration: underline">REFEREE 2</h5>
+                                    <h5 style="text-decoration: underline" class=" mb-3">REFEREE 2</h5>
                                     <div class="form-group">
                                         <div class="md-form">
                                             <i class="fa fa-user prefix"></i>
@@ -783,31 +784,7 @@
                             <hr>
                             <div class="row">
                                 <div class="col-12">
-                                    <p>Have you any particular career in view?</p>
-                                    <div class="form-group">
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio"
-                                                name="careerChoice" id="yes"
-                                                value="Yes"> Yes
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-check form-check-inline">
-                                            <label class="form-check-label">
-                                                <input class="form-check-input" type="radio"
-                                                name="careerChoice" id="no"
-                                                value="No"> No
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-12">
-                                    <button type="submit" onclick="" class="btn btn-primary">Submit</button>
+                                    <button type="submit" onclick="" class="btn btn-outline-primary animated flipInY">Submit</button>
                                 </div>
                             </div>
                         </div>

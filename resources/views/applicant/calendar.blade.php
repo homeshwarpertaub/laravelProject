@@ -3,8 +3,8 @@
 @section('activehome','active')
 @section('main-content')
     <main class="text-center">
-        <div class="container">
-            <div id="calendar"></div>
+        <div class="container jumbotron bg-elegant">
+            <div id="calendar" class="purple-text bg-light animated flipInY"></div>
 
         </div>
     </main>
@@ -25,7 +25,8 @@
                     },
                     @endforeach
                 ],
-                eventBorderColor: '#fff'
+                eventBorderColor: 'purple',
+                eventTextColor: 'white',
             })
         });
     </script>

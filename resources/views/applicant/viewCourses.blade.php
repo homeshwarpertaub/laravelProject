@@ -13,15 +13,15 @@
                                index-name="courses">
                         <form action="" class="form-inline"></form>
                         <ais-search-box>
-                            <div class="input-group">
+                            <div class="input-group mb-5">
                                 <ais-input
-                                        placeholder="Search product by name or reference..."
+                                        placeholder="Search by course name"
                                         :class-names="{
                 'ais-input': 'form-control'
                 }"
                                 ></ais-input>
 
-                                <span class="input-group-btn"><button class="btn btn-default" type="submit">
+                                <span class="input-group-btn"><button class="btn btn-outline-default" type="submit">
                   <span class="fa fa-search" aria-hidden="true"></span>
                 </button>
               </span>
@@ -32,7 +32,7 @@
                             <template scope="{ result }">
 
                                 <div class="col-md-4">
-                                    <div class="card">
+                                    <div class="card animated flipInY">
                                         <!--Card image-->
 
                                         <!--Card content-->

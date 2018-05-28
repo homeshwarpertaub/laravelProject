@@ -5,7 +5,7 @@
 
     <div class="" style="background-image: url({{asset('user/img/university.jpg')}})">
 
-        <div class="container example z-depth-5">
+        <div class="container example">
             <div class="row justify-content-md-center">
                 <div class="jumbotron col-md-12">
 
@@ -16,7 +16,7 @@
 
                             <div class="md-form">
                                 <i class="fa fa-user prefix grey-text"></i>
-                                <input type="text" id="name" name="name" class="form-control">
+                                <input type="text" id="name" name="name" required class="form-control">
                                 <label for="name">Your name</label>
                             </div>
 
@@ -30,20 +30,20 @@
                             <!-- Material input email -->
                             <div class="md-form">
                                 <i class="fa fa-tag prefix grey-text"></i>
-                                <input type="text" id="subject" name="subject" class="form-control">
+                                <input type="text" id="subject" name="subject" required class="form-control">
                                 <label for="subject">Subject</label>
                             </div>
 
                             <!-- Material input password -->
                             <div class="md-form">
                                 <i class="fa fa-pencil prefix grey-text"></i>
-                                <textarea type="text" id="message" name="message" class="form-control md-textarea"
+                                <textarea type="text" id="message" name="message" required class="form-control md-textarea"
                                           rows="3"></textarea>
                                 <label for="message">Your message</label>
                             </div>
 
                             <div class="text-center mt-4">
-                                <button class="btn btn-outline-secondary" type="submit">Send<i
+                                <button class="btn btn-outline-secondary animated flipInY" type="submit">Send<i
                                             class="fa fa-paper-plane-o ml-2"></i></button>
                             </div>
                         </form>

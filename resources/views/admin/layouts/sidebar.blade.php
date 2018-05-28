@@ -19,9 +19,9 @@
         <ul class="nav" id="side-menu">
 
             <li class="nav-small-cap m-t-10">--- Main Menu</li>
-            <li class="@yield('activeadminhome')"><a href="{{route('admin.home')}}">Home</a></li>
+            <li class="@yield('activeadminhome')"><a href="{{route('admin.home')}}"><i class="icon-home"></i> Home</a></li>
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="icon-badge"></i>
                     <span class="hide-menu">Permissions<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">
@@ -30,7 +30,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="icon-user-following"></i>
                     <span class="hide-menu">Roles<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">
@@ -39,7 +39,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="icon-people"></i>
                     <span class="hide-menu">Admin<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">
@@ -48,7 +48,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="ti-view-list-alt"></i>
                     <span class="hide-menu">Category<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">
@@ -57,7 +57,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="ti-book"></i>
                     <span class="hide-menu">Courses<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">
@@ -67,7 +67,7 @@
             </li>
 
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="ti-id-badge"></i>
                     <span class="hide-menu">Applicants<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">
@@ -77,7 +77,7 @@
             </li>
 
             <li>
-                <a href="#" class="waves-effect "><i data-icon="&#xe008;" class="linea-icon linea-basic fa-fw"></i>
+                <a href="#" class="waves-effect "><i class="ti-view-list-alt"></i>
                     <span class="hide-menu">Calendar<span class="fa arrow"></span><span
                                 class="label label-rouded label-purple pull-right">2</span></span></a>
                 <ul class="nav nav-second-level">

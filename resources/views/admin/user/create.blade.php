@@ -27,31 +27,31 @@
                         <div class="form-group">
                             <label for="name" class="col-md-12">Name</label>
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="name" placeholder="Name"
+                                <input type="text" class="form-control" name="name" required placeholder="Name"
                                        id="name" value="{{ old('name') }}"></div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-md-12">Email</label>
                             <div class="col-md-12">
-                                <input type="email" class="form-control" name="email" placeholder="Email"
+                                <input type="email" class="form-control" required name="email" placeholder="Email"
                                        id="email"></div>
                         </div>
                         <div class="form-group">
                             <label for="phone" class="col-md-12">Phone Number</label>
                             <div class="col-md-12">
-                                <input type="number" class="form-control" name="phone" placeholder="Phone Number"
+                                <input type="number" class="form-control" required name="phone" placeholder="Phone Number"
                                        id="phone"></div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="col-md-12">Password</label>
                             <div class="col-md-12">
-                                <input type="password" class="form-control" name="password" placeholder="Password"
+                                <input type="password" class="form-control" required name="password" placeholder="Password"
                                        id="password"></div>
                         </div>
                         <div class="form-group">
                             <label for="password_confirmation" class="col-md-12">Confirm Password</label>
                             <div class="col-md-12">
-                                <input type="password" class="form-control" name="password_confirmation"
+                                <input type="password" class="form-control" required name="password_confirmation"
                                        placeholder="Confirm Password"
                                        id="password_confirmation"></div>
                         </div>
@@ -61,8 +61,8 @@
                             <div class="row">
                                 @foreach($roles as $role)
                                     <div class="col-md-4">
-                                        <div class="checkbox checkbox-success">
-                                            <input type="checkbox" name="role[]"
+                                        <div class="radio radio-success">
+                                            <input type="radio" required name="role[]"
                                                    value="{{$role->id}}"> <label>{{$role->name}}</label>
                                         </div>
                                     </div>
@@ -70,7 +70,6 @@
                             </div>
 
                         </div>
-
 
                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
                         <a href="{{route('user.index')}}" class="btn btn-warning">Back</a>

@@ -60,17 +60,17 @@ class CourseController extends Controller
     {
         //
 //        return $request->all();
-        /*      $this->validate($request,[
-                  'courseName' => 'required',
-                  'courseMode' => 'required',
-                  'courseDuration' => 'required',
-                  'checkboxPublish' => 'required',
-                  'courseBody' => 'required'
-
-              ]);*/
-        if ($request->hasFile('image')) {
-            $request->image->store('public/image');
-        }
+//              $this->validate($request,[
+//                  'courseName' => 'required',
+//                  'courseMode' => 'required',
+//                  'courseDuration' => 'required',
+//                  'categories' => 'required',
+//                  'courseBody' => 'required'
+//
+//              ]);
+//        if ($request->hasFile('image')) {
+//            $request->image->store('public/image');
+//        }
 
 
         $course = new course;
@@ -78,7 +78,7 @@ class CourseController extends Controller
         $course->course_mode = $request->courseMode;
         $course->course_duration = $request->courseDuration;
         $course->slug = $request->slug;
-        $course->image= $request->image;
+//        $course->image= $request->image;
 
         $course->course_body = $request->courseBody;
         $course->save();

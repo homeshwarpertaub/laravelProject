@@ -4,11 +4,11 @@
 @section('main-content')
 <main class="text-center">
     <div class="container">
-        <a href="{{route('applicant.viewCourses')}}" class="btn btn-outline-elegant"> Search Here <i class="fa fa-search" aria-hidden="true"></i></a>
+        <a href="{{route('applicant.viewCourses')}}" class="btn btn-outline-elegant btn-lg mb-5"> Search Here <i class="fa fa-search" aria-hidden="true"></i></a>
         <div class="row">
             @foreach($courses as $course)
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card animated flipInY">
                         <div class="view overlay hm-white-slight">
                             <img src="{{ Storage::disk('local')->url($course->image) }}"
                                  class="img-fluid" alt="">
@@ -28,7 +28,7 @@
                                         </small>
                                 </small>
                                 <a href="{{ route('applicant.courseDetails', $course->id) }}"
-                                   class="btn btn-primary">Learn More</a>
+                                   class="btn btn-outline-primary ">Learn More</a>
                                 @endforeach</p>
                         </div>
 

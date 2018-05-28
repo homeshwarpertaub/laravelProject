@@ -36,7 +36,7 @@
                             <div class="col-md-4">
                                 <label for="name">Course Permissions</label>
                                 @foreach($permissions as $permission)
-                                    @if($permission->to_do == 'post')
+                                    @if($permission->to_do == 'course')
                                         <div class="checkbox checkbox-success">
                                             <input type="checkbox" name="permission[]"
                                                    value="{{ $permission->id }}"

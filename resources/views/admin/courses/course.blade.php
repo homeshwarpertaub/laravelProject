@@ -49,21 +49,21 @@
                                        id="slug" required></div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="input-file-now col-md-3">Your so fresh input file — Default version</label>
-                            <div class="col-md-3">
-                            <input type="file" id="input-file-now" class="dropify" /> </div>
-                        </div>
+                        {{--<div class="form-group">--}}
+                            {{--<label for="input-file-now col-md-3">Your so fresh input file — Default version</label>--}}
+                            {{--<div class="col-md-3">--}}
+                            {{--<input type="file" id="input-file-now" class="dropify" /> </div>--}}
+                        {{--</div>--}}
 
 
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="checkbox checkbox-success">
-                                    <input id="checkboxPublish" type="checkbox" name="checkboxPublish">
-                                    <label for="checkboxPublish">Publish</label>
-                                </div>
-                            </div>
-                        </div>
+                        {{--<div class="form-group">--}}
+                            {{--<div class="col-sm-9">--}}
+                                {{--<div class="checkbox checkbox-success">--}}
+                                    {{--<input id="checkboxPublish" type="checkbox" name="checkboxPublish">--}}
+                                    {{--<label for="checkboxPublish">Publish</label>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
                         <div class="form-group">
                             <div class="col-md-9">

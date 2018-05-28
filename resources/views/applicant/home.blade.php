@@ -64,7 +64,7 @@
             <div class="col-lg-4 col-md-4">
                 <!-- Card -->
                 <!-- Card -->
-                <div class="card">
+                <div class="card animated flipInY">
 
                     <!-- Card image -->
                     <div class="view overlay">
@@ -97,7 +97,7 @@
             <div class="col-lg-4 col-md-4">
                 <!-- Card -->
                 <!-- Card -->
-                <div class="card">
+                <div class="card animated flipInY">
 
                     <!-- Card image -->
                     <div class="view overlay">
@@ -138,7 +138,7 @@
             <div class="col-lg-4 col-md-4">
                 <!-- Card -->
                 <!-- Card -->
-                <div class="card">
+                <div class="card animated flipInY">
 
                     <div class="view overlay">
                         <img class="card-img-top"

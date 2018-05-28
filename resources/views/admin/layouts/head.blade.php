@@ -15,8 +15,6 @@
 <link href="{{asset('admin/css/animate.css')}}" rel="stylesheet">
 <!-- toast CSS -->
 <link href="{{asset('admin/plugins/bower_components/toast-master/css/jquery.toast.css')}}" rel="stylesheet">
-<!-- morris CSS -->
-<link href="{{asset('admin/plugins/bower_components/morrisjs/morris.css')}}" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">

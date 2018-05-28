@@ -25,13 +25,13 @@
                         <div class="form-group">
                             <label for="name" class="col-md-12">Permission Title</label>
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="name" placeholder="Permission Title"
+                                <input type="text" class="form-control" required name="name" placeholder="Permission Title"
                                        id="name" required></div>
                         </div>
                         
                         <div class="form-group">
                             <label for="to_do">Permission for</label>
-                            <select name="to_do" id="to_do" class="form-control">
+                            <select name="to_do" id="to_do" class="form-control" required>
                                 <option selected disabled>Select Permission</option>
                                 <option value="user">User</option>
                                 <option value="course">Course</option>

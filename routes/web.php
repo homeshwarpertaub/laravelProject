@@ -39,10 +39,7 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('search', 'CourseController@search');
     Route::resource('apply', 'applicationcontroller');
     Route::get('send', 'mailcontroller@send')->name('mailsent');
-//    Route::get('email', 'mailcontroller@email');
 
-//    Route::get('applicant/update/{id}',['as' => 'applicant.edit','uses' => 'UserEditController@edit']);
-//    Route::put('applicant/update/{id}',  ['as' => 'applicant.update', 'uses' => 'UserEditController@update']);
     Route::resource('update', 'UserEditController');
     Route::get('contact', 'ContactController@index')->name('applicant.contact');
     Route::post('contact', 'ContactController@sendContact')->name('contactEmail');

@@ -20,7 +20,7 @@
                             <div class="col-md-12">
                                 <input type="text" class="form-control" name="courseCategory"
                                        placeholder="Course Category"
-                                       id="courseCategory"></div>
+                                       id="courseCategory" required></div>
                         </div>
                         <div class="form-group">
                             <label for="slug" class="col-md-12">Slug</label>
