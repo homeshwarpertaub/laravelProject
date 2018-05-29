@@ -18,7 +18,7 @@
                         <div class="form-group">
                             <label for="courseCategory" class="col-md-12">Course Category</label>
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="courseCategory"
+                                <input type="text" class="form-control" name="category_name"
                                        placeholder="Course Category"
                                        id="courseCategory" required></div>
                         </div>

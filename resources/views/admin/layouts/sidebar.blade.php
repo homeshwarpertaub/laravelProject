@@ -20,6 +20,8 @@
 
             <li class="nav-small-cap m-t-10">--- Main Menu</li>
             <li class="@yield('activeadminhome')"><a href="{{route('admin.home')}}"><i class="icon-home"></i> Home</a></li>
+            @can('User.create', Auth::user())
+
             <li>
                 <a href="#" class="waves-effect "><i class="icon-badge"></i>
                     <span class="hide-menu">Permissions<span class="fa arrow"></span><span
@@ -38,6 +40,7 @@
                     <li class="@yield('activerolescreate')"><a href="{{ route('role.create') }}">Create Roles</a></li>
                 </ul>
             </li>
+
             <li>
                 <a href="#" class="waves-effect "><i class="icon-people"></i>
                     <span class="hide-menu">Admin<span class="fa arrow"></span><span
@@ -47,6 +50,7 @@
                     <li class="@yield('activeadmincreate')"><a href="{{ route('user.create') }}">Create Admin</a></li>
                 </ul>
             </li>
+            @endcan
             <li>
                 <a href="#" class="waves-effect "><i class="ti-view-list-alt"></i>
                     <span class="hide-menu">Category<span class="fa arrow"></span><span

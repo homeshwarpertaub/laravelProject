@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
@@ -48,5 +49,7 @@ class ContactController extends Controller
             $message->to('onefortheroad02@gmail.com');
             $message->subject($data['subject']);
         });
+//        Session::flash('message','success');
+        return redirect(route('applicant.home'));
     }
 }

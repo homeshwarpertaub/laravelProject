@@ -54,11 +54,11 @@ class CategoryController extends Controller
     {
         //
         $this->validate($request,[
-            'courseCategory' => 'required',
+            'category_name' => 'required|string|unique:categories',
         ]);
 
         $category = new category;
-        $category->category_name = $request->courseCategory;
+        $category->category_name = $request->category_name;
         $category->slug = $request->slug;
         $category->save();
 

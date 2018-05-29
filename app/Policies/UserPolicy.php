@@ -3,17 +3,18 @@
 namespace App\Policies;
 
 use App\Model\admin\admin;
+use App\Model\user\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class CoursePolicy
+class UserPolicy
 {
     use HandlesAuthorization;
 
     /**
-     * Determine whether the user can view the course.
+     * Determine whether the user can view the admin.
      *
-     * @param  \App\Model\user\User $user
-     * @param  \App\Model\admin\course $course
+     * @param  \App\Model\user\User  $user
+     * @param  \App\admin\admin  $admin
      * @return mixed
      */
     public function view(admin $user)
@@ -22,51 +23,43 @@ class CoursePolicy
     }
 
     /**
-     * Determine whether the admin can create courses.
+     * Determine whether the user can create admins.
      *
-     * @param  \App\Model\admin\admin $user
+     * @param  \App\Model\user\User  $user
      * @return mixed
      */
     public function create(admin $user)
     {
         //
-        return $this->getPermission($user, 4);
+        return $this->getPermission($user, 7);
+
     }
 
     /**
-     * Determine whether the user can update the course.
+     * Determine whether the user can update the admin.
      *
-     * @param  \App\Model\admin\admin $user
-     * @param  \App\Model\admin\course $course
+     * @param  \App\Model\user\User  $user
+     * @param  \App\admin\admin  $admin
      * @return mixed
      */
     public function update(admin $user)
     {
         //
-        return $this->getPermission($user, 5);
+        return $this->getPermission($user, 8);
 
     }
 
     /**
-     * Determine whether the user can delete the course.
+     * Determine whether the user can delete the admin.
      *
-     * @param  \App\Model\user\User $user
-     * @param  \App\Model\admin\course $course
+     * @param  \App\Model\user\User  $user
+     * @param  \App\admin\admin  $admin
      * @return mixed
      */
     public function delete(admin $user)
     {
         //
-        return $this->getPermission($user, 23);
-
-
-    }
-
-    public function category(admin $user)
-    {
-        //
-        return $this->getPermission($user, 11);
-
+        return $this->getPermission($user, 12);
 
     }
 

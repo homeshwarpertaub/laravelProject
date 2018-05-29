@@ -35,15 +35,18 @@
 
                                 @can('Payment.update',Auth::user())
                                     <th>Payment</th>
+                                @endcan
 
-                                {{--@can('Delivery.update',Auth::user())--}}
+                                @can('Delivery.update',Auth::user())
                                     <th>Delivery Status</th>
                                     <th>Delivery Comments</th>
                                 @endcan
-                                {{--@endcan--}}
 
+                                @can('Result.update',Auth::user())
                                 <th>Result status</th>
                                 <th>Result comments</th>
+                                @endcan
+
                             </tr>
                             </thead>
                             <tbody>
@@ -59,20 +62,20 @@
                                         <td><input type="text" name="paymentStatus"
                                                    value="{{ $applicants->Payment['payment_status']  }}">
                                         </td>
+                                    @endcan
 
-                                    {{--@can('Delivery.update',Auth::user())--}}
+                                    @can('Delivery.update',Auth::user())
                                         <td><input type="text" name="status" placeholder="Delivery Status"
                                                    value="{{ $applicants->Delivery['deliveries_status'] }}"></td>
                                         <td><input type="text" name="deliveredTo" placeholder="Recipient Name"
                                                    value="{{ $applicants->Delivery['comments'] }}"></td>
                                     @endcan
-                                    {{--@endcan--}}
-                                    {{--@can('Result.update',Auth::user())--}}
+                                    @can('Result.update',Auth::user())
                                         <td><input type="text" name="result_status" placeholder="Accepted/Rejected"
                                                    value="{{ $applicants->Result['result_status'] }}"></td>
                                         <td><input type="text" name="result_comments"
                                                    value="{{ $applicants->Result['result_comments'] }}"></td>
-                                {{--@endcan--}}
+                                @endcan
 
 
                             </tr>
@@ -86,18 +89,9 @@
                             </tbody>
                         </table>
                     </div>
-                    {{--<h3 class="box-title">--}}
-                    {{--<ol>--}}
-                    {{--<li>{{ $courseChoice -> title1 }}--}}
-                    {{--</li>--}}
-                    {{--<li>{{ $courseChoice -> title2 }}</li>--}}
-                    {{--<li>{{ $courseChoice -> title3 }}</li>--}}
-                    {{--</ol>--}}
-                    {{--</h3>--}}
+
                 </div>
 
-                {{--@foreach($applicant->institution as $institution)--}}
-                {{--{{ $institution-> inst_name1 }}--}}
 
             </div>
         </div>

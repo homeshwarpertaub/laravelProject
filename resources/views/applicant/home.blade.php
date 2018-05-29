@@ -2,6 +2,7 @@
 @section('title','Home Page - My University')
 @section('activehome','active')
 @section('main-content')
+    @include('includes.messages')
     <!--Carousel Wrapper-->
     <div id="video-carousel-example2" style="margin-bottom: 20px;" class="carousel slide carousel-fade"
          data-ride="carousel">
@@ -158,7 +159,7 @@
                         <p class="card-text">Facing any difficulty or you have any query? Some frequently asked
                             questions and/or guide to assist you in making your online application a smooth process</p>
                         <!-- Button -->
-                        <a href="#" class="btn btn-outline-primary">View FAQs</a>
+                        <a href="{{ route('applicant.help') }}" class="btn btn-outline-primary">View FAQs</a>
 
                     </div>
 

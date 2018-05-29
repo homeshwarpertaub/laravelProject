@@ -13,7 +13,10 @@
 
         <div class="row m-t-20">
             <div class="col-md-12">
+                @can('User.create', Auth::user())
+
                 <a href="{{route('user.create')}}" class="m-b-20 btn btn-success">Add New</a>
+                @endcan
 
                 <div class="white-box">
                     <h3 class="box-title m-b-0">Data Table</h3>

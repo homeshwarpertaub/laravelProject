@@ -15,7 +15,7 @@
 
 
 <link href="{{asset('css/app.css')}}" rel="stylesheet">
-
+<link rel="shortcut icon" href="{{ asset('img/icon.png') }}" />
 
 {{-- jquery ui css--}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">

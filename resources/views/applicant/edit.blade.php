@@ -84,6 +84,10 @@
                     <div class="col-xs-12">
                         <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Save</button>
                     </div>
+                </div><div class="form-group text-center m-t-20">
+                    <div class="col-xs-12">
+                        <a href="{{ route('applicant.home') }}" class="btn btn-danger btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Cancel</a>
+                    </div>
                 </div>
             </form>
         </div>

@@ -72,9 +72,10 @@
                                                 <td>{{ $applicant -> applicant_email }}</td>
                                                 <td>{{ $applicant->Payment['payment_status']  }}</td>
                                                 <td>
-                                                    <a href="{{route('admin.pdfs',$applicant->id)}}">{{$applicant->id}}</a>
+                                                    {{ $applicant->Delivery['deliveries_status'] }}
                                                 </td>
-                                                <td></td>
+                                                <td>{{ $applicant->Result['result_status'] }}
+                                                </td>
 
 
                                             </tr>

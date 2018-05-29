@@ -27,6 +27,7 @@ class AuthServiceProvider extends ServiceProvider
 
         Gate::resource('courses', 'App\Policies\CoursePolicy');
         Gate::resource('Payment', 'App\Policies\PaymentPolicy');
+        Gate::resource('User', 'App\Policies\UserPolicy');
         Gate::define('courses.category', 'App\Policies\CoursePolicy@category');
     }
 }

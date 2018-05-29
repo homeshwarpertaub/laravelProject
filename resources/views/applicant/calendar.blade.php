@@ -1,6 +1,6 @@
 @extends('applicant/app')
-@section('title','Home Page - My University')
-@section('activehome','active')
+@section('title','Calendar - My University')
+@section('activecalendar','active')
 @section('main-content')
     <main class="text-center">
         <div class="container jumbotron bg-elegant">
