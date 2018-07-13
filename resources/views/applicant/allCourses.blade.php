@@ -16,20 +16,19 @@
                         </div>
                         <div class="card-body">
                             <h4 class="card-title"> {{ $course->course_name }}</h4>
-                            <!--Text-->
-                            {{--show created at time--}}
                             <p class="card-text"> {{ $course->course_mode }}</p>
                             <p>
-                                <small class="left">Created
+                                <span class="left">Created
                                     at {{ $course->created_at->diffForHumans() }}
                                     @foreach ($course->categories as $category)
                                         <small class="right">
                                             <p>{{$category->category_name}}</p>
                                         </small>
+                            @endforeach
                                 </small>
                                 <a href="{{ route('applicant.courseDetails', $course->id) }}"
                                    class="btn btn-outline-primary ">Learn More</a>
-                                @endforeach</p>
+                                </p>
                         </div>
 
                     </div>
